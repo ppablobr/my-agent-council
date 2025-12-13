@@ -1,0 +1,51 @@
+# --- Secrets / env ---
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Local MCP config can contain tokens
+mcp.json
+!mcp.json.example
+
+# --- OS / editor ---
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# mcp specific
+.mcp/
+.mcp.json
+mcp.json
+
+# --- Logs ---
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Node / web ---
+node_modules/
+dist/
+build/
+.next/
+.nuxt/
+.svelte-kit/
+coverage/
+.turbo/
+.cache/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
