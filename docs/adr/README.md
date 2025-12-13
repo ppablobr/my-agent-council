@@ -2,6 +2,12 @@
 
 ADRs capture technical decisions that are hard to reverse or shape the system long-term.
 
+## Index
+
+| ADR | Title | Status |
+| --- | --- | --- |
+| [0001](./0001-spec-driven-development.md) | Spec-Driven Development Methodology | Accepted |
+
 ## When to Write an ADR
 
 - New architecture patterns (routing, state management, data access)
