@@ -1,0 +1,47 @@
+name: Feature request
+description: Propose a user-facing capability (backlog item)
+title: "feat: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: story
+    attributes:
+      label: User story
+      description: As a <persona>, I want <capability>, so that <benefit>.
+      placeholder: |
+        As a ...
+        I want ...
+        so that ...
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Why now? What problem are we solving?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria (Gherkin)
+      placeholder: |
+        Given ...
+        When ...
+        Then ...
+    validations:
+      required: true
+  - type: textarea
+    id: non_goals
+    attributes:
+      label: Non-goals
+    validations:
+      required: false
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies / decisions
+      description: Links to ADRs, decisions, other issues
+    validations:
+      required: false
+
