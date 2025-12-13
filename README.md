@@ -9,6 +9,7 @@
     <a href="./docs/adr/README.md"><img alt="ADRs" src="https://img.shields.io/badge/ADRs-enabled-8a2be2"></a>
     <a href="./PLAN_MAINTENANCE.md"><img alt="Plan Guardian" src="https://img.shields.io/badge/guardrails-CI-green"></a>
     <a href="./.github/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/badge/CI-configured-1f6feb"></a>
+    <a href="./docs/GETTING_STARTED.md"><img alt="Docs" src="https://img.shields.io/badge/docs-how--to-blue"></a>
   </p>
 
   <p>
@@ -25,11 +26,13 @@
 - [Agentes](#agentes)
 - [Como trabalhamos (Spec-Driven)](#como-trabalhamos-spec-driven)
 - [Começando rápido](#começando-rápido)
+- [📚 Documentação](#-documentação)
 - [Documentos principais](#documentos-principais)
 - [Guardrails (Automação)](#guardrails-automação)
 - [ADRs](#adrs)
 - [Estrutura do repositório](#estrutura-do-repositório)
 - [Contribuição](#contribuição)
+
 
 ## O que é
 
@@ -77,7 +80,18 @@ Definições completas: [`AGENTS.md`](AGENTS.md)
 python3 scripts/check_markdown_links.py
 ```
 
+## 📚 Documentação
+
+Guias para começar e usar o Agent Council:
+
+| Guia | Descrição |
+| --- | --- |
+| [Getting Started](docs/GETTING_STARTED.md) | Setup inicial em 5 minutos |
+| [Usage Guide](docs/USAGE.md) | Como interagir com cada agente |
+| [Customization](docs/CUSTOMIZATION.md) | Adaptar para seu projeto |
+
 ## Documentos principais
+
 
 - Planejamento: [`BACKLOG.md`](BACKLOG.md), [`ROADMAP.md`](ROADMAP.md), [`PLAN.md`](PLAN.md), [`plan.json`](plan.json)
 - Decisões: [`DECISIONS.md`](DECISIONS.md), [`docs/adr/`](docs/adr/)

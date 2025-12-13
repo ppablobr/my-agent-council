@@ -14,6 +14,7 @@ A work item is considered “done” only when all applicable criteria are met:
 
 - **Clear acceptance criteria:** The user story has testable acceptance criteria (ideally in Gherkin form).
 - **Docs updated:** Any impacted specs are updated (`PRD.md`, `STRUCTURE.md`, `PROJECT_RULES.md`, UX docs, and/or ADR/decision log).
+- **Changelog updated:** User-facing changes are documented in `CHANGELOG.md` under `[Unreleased]`.
 - **Quality gates:** Relevant tests and lint checks pass (or are explicitly documented as out-of-scope with a reason).
 - **Traceability:** Pull requests reference the related story/issue and include a short summary of user impact.
 - **Risk review:** New risks are added to `RISKS.md` when discovered; mitigations are proposed.

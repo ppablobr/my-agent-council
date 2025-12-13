@@ -13,7 +13,9 @@ Legend: **R** = Responsible (does the work), **A** = Accountable (final decision
 | UX flows, UI spec, design system | I | C | C | A/R | I | I |
 | Architecture & implementation | I | C | A/R | C | I | I |
 | Repo hygiene (issues/PR templates) | I | C | C | I | A/R | C |
+| Changelog & releases | I | C | C | I | A/R | I |
 | Plan consistency (PLAN.md ↔ plan.json) | I | C | C | I | I | A/R |
+
 
 ## How Decisions Are Made
 

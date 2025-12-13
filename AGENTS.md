@@ -48,6 +48,8 @@ The GITHUB agent is responsible for interacting with the GitHub API. It can be u
 *   **Repository Management:** Manages GitHub repositories, including creation, deletion, and configuration.
 *   **Issue Tracking:** Manages GitHub issues, including creation, assignment, and tracking.
 *   **Pull Request Management:** Manages pull requests, including creation, review, and merging.
+*   **Release Management:** Maintains `CHANGELOG.md` and version tracking.
+
 
 ## Plan Guardian Agent
 
