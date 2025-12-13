@@ -1,4 +1,6 @@
 <div align="center">
+  <img src="src/public/agent_council.png" alt="Agent Council cover" width="860" />
+
   <h1>Agent Council for Product Development</h1>
   <p><strong>Um “sistema operacional” spec-driven</strong> para construir produtos com um conselho de agentes (PM, Eng, UX, etc.) e colaboração via documentação durável.</p>
 
