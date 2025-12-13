@@ -167,6 +167,56 @@ Edit `docs/adr/0000-template.md` to add sections relevant to your project.
 
 ---
 
+## Customizing MCP Servers
+
+MCP (Model Context Protocol) servers enable AI integrations with external services. Configure them in `mcp.json`.
+
+### Initial Setup
+
+Copy the example file and add your credentials:
+
+```bash
+cp mcp.json.example mcp.json
+```
+
+### Adding Additional MCP Servers
+
+You can add multiple MCP servers to `mcp.json`:
+
+```json
+{
+  "mcpServers": {
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "your_github_token"
+      }
+    },
+    "supabase": {
+      "command": "npx",
+      "args": ["-y", "supabase-mcp-server"],
+      "env": {
+        "SUPABASE_ACCESS_TOKEN": "your_supabase_token"
+      }
+    }
+  }
+}
+```
+
+### Available MCP Servers
+
+| Server | Purpose |
+|--------|---------|
+| `@modelcontextprotocol/server-github` | GitHub operations (issues, PRs, repos) |
+| `supabase-mcp-server` | Supabase database and edge functions |
+| `@modelcontextprotocol/server-filesystem` | Local file operations |
+
+> [!WARNING]
+> Never commit `mcp.json` to version control. Ensure it's listed in `.gitignore`.
+
+---
+
 ## Project-Specific Adaptations
 
 ### For Mobile Apps

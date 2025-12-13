@@ -52,7 +52,36 @@ git remote set-url origin https://github.com/YOUR_USERNAME/your-repo.git
 
 3. **Customize `ux_ui_designer/DESIGN_SYSTEM.md`** — Define your design tokens.
 
-### 4. Start Your First Task
+### 4. Configure MCP Servers (Optional)
+
+If you want to enable AI integrations like automated GitHub operations, configure the MCP (Model Context Protocol) servers:
+
+1. Copy the example configuration:
+
+```bash
+cp mcp.json.example mcp.json
+```
+
+2. Edit `mcp.json` and add your credentials:
+
+```json
+{
+  "mcpServers": {
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "your_actual_token_here"
+      }
+    }
+  }
+}
+```
+
+> [!IMPORTANT]
+> Never commit `mcp.json` to version control — it contains sensitive credentials. The `.gitignore` file already includes this file.
+
+### 5. Start Your First Task
 
 1. Add a work item to `BACKLOG.md`:
 
