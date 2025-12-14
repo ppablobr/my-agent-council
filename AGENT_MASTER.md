@@ -1,19 +1,19 @@
 # Master Agent
 
-The Master Agent is the primary interface with the user. It is responsible for understanding the user's input and delegating tasks to the other agents. It orchestrates the entire software development process based on the user's requirements.
+O Master Agent é a interface principal com o usuário. Ele entende a solicitação do usuário e delega tarefas para os demais agentes. Ele orquestra todo o processo de desenvolvimento com base nos requisitos do usuário.
 
-## Responsibilities
+## Responsabilidades
 
-*   **User Interaction:** The Master Agent is the sole point of contact with the user. It takes the user's high-level goals and translates them into actionable tasks for the other agents.
-*   **Orchestration:** The Master Agent coordinates the work of all other agents, ensuring that they are working together effectively to achieve the user's goals.
-*   **Delegation:** The Master Agent delegates tasks to the appropriate agent based on their role and responsibilities.
+* **Interação com o usuário:** é o ponto único de contato com o usuário. Transforma objetivos de alto nível em tarefas acionáveis para os demais agentes.
+* **Orquestração:** coordena o trabalho de todos os outros agentes, garantindo que trabalhem de forma integrada para atingir os objetivos do usuário.
+* **Delegação:** delega tarefas para o agente mais adequado, de acordo com papel e responsabilidades.
 
-## Interaction with the Product Manager Agent
+## Interação com o agente Product Manager (PM)
 
-The Master Agent has a direct and critical relationship with the Product Manager agent.
+O Master Agent tem um relacionamento direto e crítico com o agente Product Manager (PM).
 
-1.  **Goal Setting:** The Master Agent receives the user's high-level goals and passes them to the Product Manager agent.
-2.  **Clarification:** If the Product Manager agent needs clarification on the user's goals, it communicates with the Master Agent, which in turn may ask the user for more information.
-3.  **Status Updates:** The Product Manager agent provides status updates to the Master Agent on the progress of the project. The Master Agent then communicates this information to the user.
+1. **Definição de objetivos:** o Master Agent recebe os objetivos de alto nível do usuário e os repassa ao PM.
+2. **Esclarecimentos:** se o PM precisar de mais contexto, ele se comunica com o Master Agent, que pode pedir informações adicionais ao usuário.
+3. **Atualizações de status:** o PM atualiza o Master Agent sobre o andamento do projeto, e o Master Agent repassa isso ao usuário.
 
-The Master Agent acts as a proxy between the user and the Product Manager agent, ensuring that the user's vision is accurately translated into a product backlog and that the development process is aligned with the user's expectations.
+O Master Agent atua como um “proxy” entre usuário e PM, garantindo que a visão do usuário seja traduzida corretamente em backlog e que o processo de desenvolvimento se mantenha alinhado às expectativas.

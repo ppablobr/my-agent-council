@@ -1,68 +1,68 @@
-# Getting Started
+# Primeiros passos
 
-This guide walks you through setting up and using the Agent Council for your own projects.
+Este guia mostra como configurar e usar o Agent Council nos seus próprios projetos.
 
-## Prerequisites
+## Pré-requisitos
 
-- **Git** for version control
-- **IDE with AI Assistant** (e.g., Cursor, VS Code with Copilot, or any AI coding tool)
-- Basic familiarity with Markdown
+- **Git** para controle de versão
+- **IDE com assistente de IA** (ex.: Cursor, VS Code com Copilot ou qualquer ferramenta de IA para programar)
+- Familiaridade básica com Markdown
 
-## Quick Start (5 minutes)
+## Começando rápido (5 minutos)
 
-### 1. Fork or Clone the Repository
+### 1. Faça fork ou clone do repositório
 
 ```bash
-# Option A: Fork on GitHub, then clone your fork
+# Opção A: faça fork no GitHub e depois clone o seu fork
 git clone https://github.com/YOUR_USERNAME/my-agent-council.git
 
-# Option B: Clone directly and set your own remote
+# Opção B: clone diretamente e configure o seu remote
 git clone https://github.com/ppablobr/my-agent-council.git my-project
 cd my-project
 git remote set-url origin https://github.com/YOUR_USERNAME/your-repo.git
 ```
 
-### 2. Understand the Structure
+### 2. Entenda a estrutura
 
 ```
-├── AGENTS.md                 # Agent roles and responsibilities
-├── AGENT_MASTER.md           # Master agent orchestration
-├── BACKLOG.md                # Prioritized work items
-├── DECISIONS.md              # Decision log
-├── PLAN.md                   # Project execution plan
-├── ROADMAP.md                # Milestones
-├── RISKS.md                  # Risk register
+├── AGENTS.md                 # Papéis e responsabilidades dos agentes
+├── AGENT_MASTER.md           # Orquestração do Master Agent
+├── BACKLOG.md                # Itens de trabalho priorizados
+├── DECISIONS.md              # Log de decisões
+├── PLAN.md                   # Plano de execução do projeto
+├── ROADMAP.md                # Marcos (milestones)
+├── RISKS.md                  # Registro de riscos
 │
-├── product_manager/          # PM specs (PRD, governance, rules)
-├── software_engineer/        # Eng specs (coding, database, stack)
-├── ux_ui_designer/           # UX/UI specs (design system, flows)
-├── github_agent/             # GitHub automation
-├── plan_guardian/            # Plan maintenance
+├── product_manager/          # Specs do PM (PRD, governança, regras)
+├── software_engineer/        # Specs de Eng (código, banco, stack)
+├── ux_ui_designer/           # Specs de UX/UI (design system, fluxos)
+├── github_agent/             # Automação no GitHub
+├── plan_guardian/            # Manutenção do plano
 │
-├── docs/adr/                 # Architecture Decision Records
-├── scripts/                  # Guardrails and automation
-└── app/                      # Your application code
+├── docs/adr/                 # Registros de Decisão de Arquitetura (ADRs)
+├── scripts/                  # Guardrails e automação
+└── app/                      # Código da sua aplicação
 ```
 
-### 3. Configure Your Project
+### 3. Configure o seu projeto
 
-1. **Edit `product_manager/PRD.md`** — Define your product vision, users, and goals.
+1. **Edite `product_manager/PRD.md`** — defina a visão do produto, usuários e objetivos.
 
-2. **Update `software_engineer/TECH_STACK.md`** — Set your technology choices.
+2. **Atualize `software_engineer/TECH_STACK.md`** — defina as escolhas de tecnologia.
 
-3. **Customize `ux_ui_designer/DESIGN_SYSTEM.md`** — Define your design tokens.
+3. **Personalize `ux_ui_designer/DESIGN_SYSTEM.md`** — defina seus tokens de design.
 
-### 4. Configure MCP Servers (Optional)
+### 4. Configure servidores MCP (opcional)
 
-If you want to enable AI integrations like automated GitHub operations, configure the MCP (Model Context Protocol) servers:
+Se você quiser habilitar integrações de IA, como operações automatizadas no GitHub, configure os servidores MCP (Model Context Protocol):
 
-1. Copy the example configuration:
+1. Copie a configuração de exemplo:
 
 ```bash
 cp mcp.json.example mcp.json
 ```
 
-2. Edit `mcp.json` and add your credentials:
+2. Edite `mcp.json` e adicione suas credenciais:
 
 ```json
 {
@@ -71,7 +71,7 @@ cp mcp.json.example mcp.json
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-github"],
       "env": {
-        "GITHUB_PERSONAL_ACCESS_TOKEN": "your_actual_token_here"
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "seu_token_real_aqui"
       }
     }
   }
@@ -79,45 +79,45 @@ cp mcp.json.example mcp.json
 ```
 
 > [!IMPORTANT]
-> Never commit `mcp.json` to version control — it contains sensitive credentials. The `.gitignore` file already includes this file.
+> Nunca faça commit de `mcp.json` no controle de versão — ele contém credenciais sensíveis. O arquivo `.gitignore` já inclui esse arquivo.
 
-### 5. Start Your First Task
+### 5. Comece sua primeira tarefa
 
-1. Add a work item to `BACKLOG.md`:
+1. Adicione um item de trabalho em `BACKLOG.md`:
 
 ```markdown
 | BL-004 | Feature | User authentication | Ready | M1 | Eng | - |
 ```
 
-2. Ask your AI assistant:
+2. Peça ao seu assistente de IA:
 
-> "Act as the Software Engineer agent. Implement BL-004 (User authentication) following the specs in `software_engineer/` and update the plan when done."
+> "Aja como o agente Software Engineer. Implemente o BL-004 (autenticação de usuário) seguindo as specs em `software_engineer/` e atualize o plano quando terminar."
 
-3. The AI will:
-   - Read the relevant specs
-   - Implement the feature in `app/`
-   - Update `PLAN.md` and `BACKLOG.md`
+3. A IA irá:
+   - Ler as specs relevantes
+   - Implementar a funcionalidade em `app/`
+   - Atualizar `PLAN.md` e `BACKLOG.md`
 
-## Workflow Overview
+## Visão geral do workflow
 
 ```mermaid
 flowchart LR
-    A[User Request] --> B[Master Agent]
-    B --> C{Route to Agent}
+    A[Solicitação do usuário] --> B[Master Agent]
+    B --> C{Roteia para agente}
     C --> D[Product Manager]
     C --> E[Software Engineer]
     C --> F[UX/UI Designer]
-    D --> G[Update Specs]
-    E --> H[Write Code]
-    F --> I[Design System]
+    D --> G[Atualiza specs]
+    E --> H[Escreve código]
+    F --> I[Design system]
     G --> J[Plan Guardian]
     H --> J
     I --> J
-    J --> K[Validate & Sync]
+    J --> K[Valida e sincroniza]
 ```
 
-## Next Steps
+## Próximos passos
 
-- Read the full [Usage Guide](./USAGE.md) for detailed workflows
-- See [Customization Guide](./CUSTOMIZATION.md) to adapt the council to your needs
-- Check [ADR Process](./adr/README.md) for recording technical decisions
+- Leia o [Guia de uso](./USAGE.md) para workflows detalhados
+- Veja o [Guia de personalização](./CUSTOMIZATION.md) para adaptar o conselho ao seu projeto
+- Consulte o [processo de ADR](./adr/README.md) para registrar decisões técnicas

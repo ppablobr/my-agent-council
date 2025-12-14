@@ -1,12 +1,11 @@
-# Risks
+# Riscos
 
-Track active project risks with mitigations. Keep this list short and reviewed regularly.
+Acompanhe riscos ativos do projeto com mitigações. Mantenha esta lista curta e revisada com frequência.
 
-## Risk Register
+## Registro de riscos
 
-| ID | Risk | Impact | Likelihood | Mitigation | Owner | Status |
+| ID | Risco | Impacto | Probabilidade | Mitigação | Responsável | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| R-001 | Spec drift (docs don’t match code) | High | Medium | CI guardrails + Plan Guardian checks | Plan Guardian | Active |
-| R-002 | Scope creep during milestones | High | Medium | Scope freeze + change control rules | PM | Active |
-| R-003 | Missing automated quality gates | Medium | Medium | Add baseline CI workflow; run lint/tests when present | Eng | Active |
-
+| R-001 | Spec drift (docs não batem com o código) | Alto | Médio | Guardrails no CI + checks do Plan Guardian | Plan Guardian | Ativo |
+| R-002 | Scope creep durante milestones | Alto | Médio | Congelamento de escopo + regras de controle de mudanças | PM | Ativo |
+| R-003 | Falta de gates de qualidade automatizados | Médio | Médio | Adicionar CI baseline; rodar lint/testes quando existirem | Eng | Ativo |

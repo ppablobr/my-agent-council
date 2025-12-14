@@ -1,10 +1,10 @@
-# Plan Guardian Agent
+# Agente Plan Guardian
 
-This directory contains the documentation for the Plan Guardian Agent.
+Este diretório contém a documentação do Agente Plan Guardian.
 
-The Plan Guardian Agent is responsible for monitoring the codebase for changes and ensuring that those changes are reflected in the project plan. This agent is a key component of our Spec-Driven Development (SDD) and Vibe Coding methodologies, as it ensures that the plan remains the single source of truth for the project.
+O Agente Plan Guardian é responsável por monitorar o codebase em busca de mudanças e garantir que essas mudanças sejam refletidas no plano do projeto. Esse agente é um componente-chave das nossas metodologias de Spec-Driven Development (SDD) e Vibe Coding, pois garante que o plano permaneça como a única fonte de verdade do projeto.
 
-## Documents
+## Documentos
 
--   [GUARDRAILS.md](GUARDRAILS.md): Describes the concept of guardrails and how they are used to enforce the project rules.
--   [MONITORED_RESOURCES.md](MONITORED_RESOURCES.md): Describes the resources that the Plan Guardian Agent should monitor.
+- [GUARDRAILS.md](GUARDRAILS.md): Descreve o conceito de guardrails e como eles são usados para reforçar as regras do projeto.
+- [MONITORED_RESOURCES.md](MONITORED_RESOURCES.md): Descreve os recursos que o Agente Plan Guardian deve monitorar.

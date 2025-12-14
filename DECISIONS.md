@@ -1,33 +1,32 @@
-# Decisions
+# Decisões
 
-This log captures product/process decisions that should be easy to discover without reading chat history.
+Este log registra decisões de produto/processo que devem ser fáceis de encontrar sem precisar ler histórico de chat.
 
-Use ADRs (`docs/adr/`) for technical architecture decisions with long-term impact.
+Use ADRs (`docs/adr/`) para decisões de arquitetura técnica com impacto de longo prazo.
 
-## Decision Format
+## Formato de decisão
 
-Each entry should include:
+Cada entrada deve incluir:
 
-- **Date**
-- **Decision**
-- **Status:** Proposed / Accepted / Rejected / Superseded
-- **Context:** why this was needed
-- **Consequences:** what changes because of it
-- **Links:** ADRs, backlog items, PRs
+- **Data**
+- **Decisão**
+- **Status:** Proposta / Aceita / Rejeitada / Substituída
+- **Contexto:** por que isso foi necessário
+- **Consequências:** o que muda por causa disso
+- **Links:** ADRs, itens de backlog, PRs
 
 ## Log
 
-### 2025-12-13 — Establish baseline governance + DoD
+### 2025-12-13 — Estabelecer baseline de governança + DoD
 
-- **Status:** Accepted
-- **Context:** Needed a durable process for the agent council to avoid spec drift and scope creep.
-- **Consequences:** DoD, scope-freeze rules, and traceability requirements are now explicit.
+- **Status:** Aceita
+- **Contexto:** Precisávamos de um processo durável para o Agent Council evitar “spec drift” e “scope creep”.
+- **Consequências:** DoD, regras de congelamento de escopo e requisitos de rastreabilidade agora estão explícitos.
 - **Links:** `product_manager/GOVERNANCE.md`, `product_manager/PROJECT_RULES.md`, `BACKLOG.md`, `ROADMAP.md`, `RISKS.md`
 
-### 2025-12-13 — Adopt Spec-Driven Development as core methodology
+### 2025-12-13 — Adotar Spec-Driven Development como metodologia central
 
-- **Status:** Accepted
-- **Context:** Formalized the spec-driven approach as an ADR for long-term reference.
-- **Consequences:** All agents follow spec-first workflow; guardrails enforce documentation.
+- **Status:** Aceita
+- **Contexto:** Formalizamos a abordagem spec-driven como um ADR para referência de longo prazo.
+- **Consequências:** Todos os agentes seguem fluxo “spec-first”; guardrails reforçam atualização de documentação.
 - **Links:** ADR `docs/adr/0001-spec-driven-development.md`, BL-002
-

@@ -1,28 +1,27 @@
-# ADR NNNN: <title>
+# ADR NNNN: <título>
 
 ## Status
 
-Proposed | Accepted | Rejected | Superseded by ADR NNNN
+Proposto | Aceito | Rejeitado | Substituído pelo ADR NNNN
 
 ## Context
 
-What problem are we solving? What constraints exist?
+Que problema estamos resolvendo? Quais restrições existem?
 
-## Decision
+## Decisão
 
-What did we decide?
+O que decidimos?
 
 ## Alternatives Considered
 
-- Option A: pros/cons
-- Option B: pros/cons
+- Opção A: prós/contras
+- Opção B: prós/contras
 
 ## Consequences
 
-What changes as a result? What new risks are introduced?
+O que muda como resultado? Que novos riscos são introduzidos?
 
 ## Links
 
 - Backlog: BL-XXX
-- Related decisions: `DECISIONS.md`
-
+- Decisões relacionadas: `DECISIONS.md`

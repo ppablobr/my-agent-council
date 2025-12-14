@@ -1,21 +1,20 @@
 # Backlog
 
-This backlog is the source of truth for prioritized work items. Keep items small, testable, and linked to acceptance criteria.
+Este backlog é a fonte de verdade para itens de trabalho priorizados. Mantenha os itens pequenos, testáveis e vinculados a critérios de aceitação.
 
-## Status Definitions
+## Definições de status
 
-- **Idea:** Candidate, not yet shaped
-- **Ready:** Has story + acceptance criteria
-- **In Progress:** Actively being implemented
-- **Blocked:** Cannot proceed (must state why)
-- **Done:** Meets Definition of Done
+- **Ideia:** candidato, ainda não refinado
+- **Pronto:** tem história + critérios de aceitação
+- **Em andamento:** está sendo implementado ativamente
+- **Bloqueado:** não pode prosseguir (deve informar o motivo)
+- **Concluído:** atende à Definition of Done (DoD)
 
-## Items
+## Itens
 
-| ID | Type | Title | Status | Milestone | Primary Owner | Links |
+| ID | Tipo | Título | Status | Marco | Responsável principal | Links |
 | --- | --- | --- | --- | --- | --- | --- |
-| BL-001 | Chore | Establish governance + guardrails baseline | Done | M0 | PM / Plan Guardian | `product_manager/GOVERNANCE.md`, `product_manager/PROJECT_RULES.md` |
-| BL-002 | Chore | Add ADR process + decision log | Done | M0 | PM / Eng | `DECISIONS.md`, `docs/adr/`, `docs/adr/0001-spec-driven-development.md` |
-| BL-003 | Chore | Add GitHub templates + CI docs checks | Done | M0 | GitHub Agent / Plan Guardian | `.github/` |
-| BL-004 | Docs | Add how-to documentation guides | Done | M0 | PM / All | `docs/GETTING_STARTED.md`, `docs/USAGE.md`, `docs/CUSTOMIZATION.md` |
-
+| BL-001 | Chore | Estabelecer governança + baseline de guardrails | Concluído | M0 | PM / Plan Guardian | `product_manager/GOVERNANCE.md`, `product_manager/PROJECT_RULES.md` |
+| BL-002 | Chore | Adicionar processo de ADR + log de decisões | Concluído | M0 | PM / Eng | `DECISIONS.md`, `docs/adr/`, `docs/adr/0001-spec-driven-development.md` |
+| BL-003 | Chore | Adicionar templates do GitHub + checks de docs no CI | Concluído | M0 | Agente GitHub / Plan Guardian | `.github/` |
+| BL-004 | Docs | Adicionar guias “como fazer” (how-to) | Concluído | M0 | PM / Todos | `docs/GETTING_STARTED.md`, `docs/USAGE.md`, `docs/CUSTOMIZATION.md` |

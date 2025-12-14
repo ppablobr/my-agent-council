@@ -1,21 +1,21 @@
-# Database Schema
+# Esquema do banco de dados
 
-This document outlines the database schema conventions and patterns for the project, using Supabase (PostgreSQL).
+Este documento descreve convenções e padrões de schema do banco de dados do projeto, usando Supabase (PostgreSQL).
 
-## Naming Conventions
+## Convenções de nomenclatura
 
-| Element | Convention | Example |
+| Elemento | Convenção | Exemplo |
 | --- | --- | --- |
-| Tables | snake_case, plural | `user_profiles`, `chat_messages` |
-| Columns | snake_case | `created_at`, `user_id` |
-| Primary keys | `id` (UUID) | `id uuid primary key default gen_random_uuid()` |
-| Foreign keys | `[table_singular]_id` | `user_id`, `project_id` |
-| Timestamps | `created_at`, `updated_at` | Standard on all tables |
-| Boolean columns | `is_` or `has_` prefix | `is_active`, `has_verified_email` |
+| Tabelas | snake_case, plural | `user_profiles`, `chat_messages` |
+| Colunas | snake_case | `created_at`, `user_id` |
+| Chaves primárias | `id` (UUID) | `id uuid primary key default gen_random_uuid()` |
+| Chaves estrangeiras | `[tabela_singular]_id` | `user_id`, `project_id` |
+| Timestamps | `created_at`, `updated_at` | Padrão em todas as tabelas |
+| Colunas booleanas | prefixo `is_` ou `has_` | `is_active`, `has_verified_email` |
 
-## Standard Columns
+## Colunas padrão
 
-Every table should include:
+Toda tabela deve incluir:
 
 ```sql
 id uuid primary key default gen_random_uuid(),
@@ -23,18 +23,18 @@ created_at timestamptz default now() not null,
 updated_at timestamptz default now() not null
 ```
 
-## Migration Guidelines
+## Diretrizes de migração
 
-- **One migration per logical change** (don't bundle unrelated changes).
-- **Migration naming:** `YYYYMMDDHHMMSS_short_description.sql`
-- **Always include rollback** in comments or separate down migration.
-- **Test migrations** on a branch before applying to production.
+- **Uma migração por mudança lógica** (não agrupe mudanças não relacionadas).
+- **Nome da migração:** `YYYYMMDDHHMMSS_short_description.sql`
+- **Sempre inclua rollback** em comentários ou uma migração “down” separada.
+- **Teste migrações** em uma branch antes de aplicar em produção.
 
-### Migration Template
+### Template de migração
 
 ```sql
 -- Migration: create_user_profiles
--- Description: Creates the user_profiles table for storing user data
+-- Description: Cria a tabela user_profiles para armazenar dados de usuário
 -- Rollback: DROP TABLE IF EXISTS user_profiles;
 
 create table user_profiles (
@@ -46,19 +46,19 @@ create table user_profiles (
   updated_at timestamptz default now() not null
 );
 
--- Enable RLS
+-- Habilitar RLS
 alter table user_profiles enable row level security;
 
--- Index for common queries
+-- Índice para queries comuns
 create index idx_user_profiles_user_id on user_profiles(user_id);
 ```
 
-## Row Level Security (RLS) Patterns
+## Padrões de Row Level Security (RLS)
 
-### User-Owned Data
+### Dados “possuídos” pelo usuário
 
 ```sql
--- Users can only read/write their own data
+-- Usuários só podem ler/escrever seus próprios dados
 create policy "Users can view own profile"
   on user_profiles for select
   using (auth.uid() = user_id);
@@ -68,10 +68,10 @@ create policy "Users can update own profile"
   using (auth.uid() = user_id);
 ```
 
-### Public Read, Authenticated Write
+### Leitura pública, escrita autenticada
 
 ```sql
--- Anyone can read, only authenticated users can write
+-- Qualquer pessoa pode ler; apenas usuários autenticados podem escrever
 create policy "Public read access"
   on posts for select
   to anon, authenticated
@@ -83,62 +83,62 @@ create policy "Authenticated users can create"
   with check (auth.uid() = author_id);
 ```
 
-## Common Schema Patterns
+## Padrões comuns de schema
 
-### Soft Delete
+### Soft delete
 
 ```sql
 deleted_at timestamptz default null
 
--- Query only active records
+-- Consultar apenas registros ativos
 create policy "Hide deleted records"
   on items for select
   using (deleted_at is null);
 ```
 
-### Audit Trail
+### Trilha de auditoria
 
 ```sql
 created_by uuid references auth.users(id),
 updated_by uuid references auth.users(id)
 ```
 
-### Enum-like Columns
+### Colunas “tipo enum”
 
-Use PostgreSQL enums or check constraints:
+Use enums do PostgreSQL ou check constraints:
 
 ```sql
--- Option 1: Enum type
+-- Opção 1: tipo enum
 create type status_type as enum ('draft', 'published', 'archived');
 status status_type default 'draft' not null
 
--- Option 2: Check constraint
+-- Opção 2: check constraint
 status text not null check (status in ('draft', 'published', 'archived'))
 ```
 
-## Indexes
+## Índices
 
-Create indexes for:
-- Foreign key columns
-- Columns used in WHERE clauses
-- Columns used in ORDER BY
+Crie índices para:
+- Colunas de chave estrangeira
+- Colunas usadas em cláusulas WHERE
+- Colunas usadas em ORDER BY
 
 ```sql
 create index idx_posts_author_id on posts(author_id);
 create index idx_posts_created_at on posts(created_at desc);
 ```
 
-## Edge Functions Integration
+## Integração com Edge Functions
 
-When calling Edge Functions that interact with the database:
-- Use the service role key only in trusted server contexts
-- Prefer RLS policies over manual auth checks
-- Return minimal data to reduce payload size
+Ao chamar Edge Functions que interagem com o banco:
+- Use a service role key apenas em contextos confiáveis no servidor
+- Prefira políticas de RLS em vez de checks manuais de autenticação
+- Retorne o mínimo de dados para reduzir payload
 
 ---
 
 ## Current Schema
 
-> **Note:** This section should be updated as the schema evolves. Add tables as they are created.
+> **Nota:** esta seção deve ser atualizada conforme o schema evoluir. Adicione tabelas quando forem criadas.
 
 _No tables defined yet._

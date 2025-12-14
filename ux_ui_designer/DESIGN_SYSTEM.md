@@ -1,14 +1,14 @@
-# Design System
+# Design system
 
-This document defines the design tokens and component patterns for the project, built on Tailwind CSS and shadcn/ui.
+Este documento define tokens de design e padrões de componentes do projeto, construído com Tailwind CSS e shadcn/ui.
 
-## Color Palette
+## Paleta de cores
 
-Based on Tailwind CSS defaults with semantic naming. Customize in `tailwind.config.js`.
+Baseada nos padrões do Tailwind CSS com nomes semânticos. Personalize em `tailwind.config.js`.
 
-### Base Colors
+### Cores base
 
-| Token | Usage | Tailwind Class |
+| Token | Uso | Classe Tailwind |
 | --- | --- | --- |
 | `background` | Page backgrounds | `bg-background` |
 | `foreground` | Primary text | `text-foreground` |
@@ -16,9 +16,9 @@ Based on Tailwind CSS defaults with semantic naming. Customize in `tailwind.conf
 | `card` | Card backgrounds | `bg-card` |
 | `border` | Borders, dividers | `border-border` |
 
-### Semantic Colors
+### Cores semânticas
 
-| Token | Usage | Tailwind Class |
+| Token | Uso | Classe Tailwind |
 | --- | --- | --- |
 | `primary` | Primary actions, links | `bg-primary`, `text-primary` |
 | `secondary` | Secondary actions | `bg-secondary` |
@@ -27,17 +27,17 @@ Based on Tailwind CSS defaults with semantic naming. Customize in `tailwind.conf
 
 ### Dark Mode
 
-Use the `dark:` variant prefix for dark mode styles. The system uses `class` strategy for dark mode toggling.
+Use o prefixo `dark:` para estilos de modo escuro. O sistema usa a estratégia `class` para alternância.
 
 ```tsx
 <div className="bg-white dark:bg-slate-900">
 ```
 
-## Typography
+## Tipografia
 
-Using the default Tailwind typography scale with Inter (or system fonts).
+Usando a escala tipográfica padrão do Tailwind com Inter (ou fontes do sistema).
 
-| Element | Class | Size |
+| Elemento | Classe | Tamanho |
 | --- | --- | --- |
 | H1 | `text-4xl font-bold` | 36px |
 | H2 | `text-3xl font-semibold` | 30px |
@@ -47,11 +47,11 @@ Using the default Tailwind typography scale with Inter (or system fonts).
 | Small | `text-sm` | 14px |
 | Caption | `text-xs text-muted-foreground` | 12px |
 
-## Spacing
+## Espaçamento
 
-Use Tailwind's spacing scale consistently:
+Use a escala de espaçamento do Tailwind de forma consistente:
 
-| Token | Value | Usage |
+| Token | Valor | Uso |
 | --- | --- | --- |
 | `1` | 4px | Tight spacing (icon gaps) |
 | `2` | 8px | Small spacing |
@@ -59,30 +59,30 @@ Use Tailwind's spacing scale consistently:
 | `6` | 24px | Section padding |
 | `8` | 32px | Large gaps |
 
-## Border Radius
+## Raio de borda
 
-| Token | Class | Value |
+| Token | Classe | Valor |
 | --- | --- | --- |
 | Small | `rounded-sm` | 2px |
 | Default | `rounded-md` | 6px |
 | Large | `rounded-lg` | 8px |
 | Full | `rounded-full` | 9999px |
 
-## Shadows
+## Sombras
 
-| Token | Class | Usage |
+| Token | Classe | Uso |
 | --- | --- | --- |
 | Small | `shadow-sm` | Subtle elevation |
 | Default | `shadow` | Cards, dropdowns |
 | Large | `shadow-lg` | Modals, popovers |
 
-## Animation
+## Animação
 
-### Transitions
+### Transições
 
-Default transition: `transition-all duration-200 ease-in-out`
+Transição padrão: `transition-all duration-200 ease-in-out`
 
-### Common Animations
+### Animações comuns
 
 ```css
 /* Fade in */
@@ -98,11 +98,11 @@ Default transition: `transition-all duration-200 ease-in-out`
 }
 ```
 
-## Component Patterns
+## Padrões de componentes
 
 ### shadcn/ui Components
 
-Use shadcn/ui as the base component library. Components are installed to `src/components/ui/`.
+Use shadcn/ui como biblioteca base. Componentes são instalados em `src/components/ui/`.
 
 ```bash
 npx shadcn-ui@latest add button
@@ -110,9 +110,9 @@ npx shadcn-ui@latest add card
 npx shadcn-ui@latest add input
 ```
 
-### Component Variants
+### Variantes de componente
 
-Use the `variants` pattern from shadcn/ui for component variations:
+Use o padrão `variants` do shadcn/ui para variações de componentes:
 
 ```tsx
 const buttonVariants = cva(
@@ -134,18 +134,18 @@ const buttonVariants = cva(
 );
 ```
 
-## Responsive Breakpoints
+## Breakpoints responsivos
 
-| Breakpoint | Min Width | Usage |
+| Breakpoint | Largura mínima | Uso |
 | --- | --- | --- |
 | `sm` | 640px | Mobile landscape |
 | `md` | 768px | Tablets |
 | `lg` | 1024px | Desktop |
 | `xl` | 1280px | Large desktop |
 
-## Accessibility
+## Acessibilidade
 
-- Minimum contrast ratio: 4.5:1 for normal text
-- Focus states: visible focus ring (`ring-2 ring-ring ring-offset-2`)
-- Interactive elements: minimum 44x44px touch target
-- Motion: respect `prefers-reduced-motion`
+- Contraste mínimo: 4.5:1 para texto normal
+- Estados de foco: focus ring visível (`ring-2 ring-ring ring-offset-2`)
+- Elementos interativos: alvo de toque mínimo 44x44px
+- Movimento: respeitar `prefers-reduced-motion`

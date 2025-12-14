@@ -1,152 +1,152 @@
-# Usage Guide
+# Guia de uso
 
-This guide explains how to work with each agent in the Agent Council.
+Este guia explica como trabalhar com cada agente no Agent Council.
 
-## Working with Agents
+## Trabalhando com agentes
 
-The Agent Council uses a **spec-driven** approach where each agent has specific responsibilities and documentation they own.
+O Agent Council usa uma abordagem **spec-driven** em que cada agente tem responsabilidades específicas e documentação sob sua responsabilidade.
 
-### Invoking an Agent
+### Como invocar um agente
 
-When working with your AI assistant, you can invoke a specific agent by using prompts like:
+Ao trabalhar com seu assistente de IA, você pode invocar um agente específico usando prompts como:
 
 ```
-Act as the [Agent Name] agent and [task description].
+Aja como o agente [Nome do agente] e [descrição da tarefa].
 ```
 
-The AI will read the relevant specs and follow the established patterns.
+A IA vai ler as specs relevantes e seguir os padrões estabelecidos.
 
 ---
 
-## Product Manager Agent
+## Agente Product Manager (PM)
 
 **Owns:** `product_manager/PRD.md`, `BACKLOG.md`, `ROADMAP.md`, `RISKS.md`
 
-### Common Tasks
+### Tarefas comuns
 
-| Task | Prompt Example |
+| Tarefa | Exemplo de prompt |
 |------|----------------|
-| Define requirements | "As PM agent, help me write user stories for a shopping cart feature" |
-| Prioritize backlog | "As PM agent, review and prioritize the items in BACKLOG.md" |
-| Scope a milestone | "As PM agent, define scope for Milestone 1 in ROADMAP.md" |
-| Assess risks | "As PM agent, identify risks for implementing payment processing" |
+| Definir requisitos | "Como agente PM, me ajude a escrever histórias de usuário para um carrinho de compras" |
+| Priorizar backlog | "Como agente PM, revise e priorize os itens em BACKLOG.md" |
+| Definir escopo de marco | "Como agente PM, defina o escopo do Marco 1 em ROADMAP.md" |
+| Avaliar riscos | "Como agente PM, identifique riscos para implementar processamento de pagamentos" |
 
-### Example Workflow
+### Exemplo de workflow
 
 ```markdown
-User: "I want to add user profiles to my app"
+Usuário: "Quero adicionar perfis de usuário no meu app"
 
-PM Agent:
-1. Creates user stories in BACKLOG.md with acceptance criteria
-2. Updates PRD.md with the feature description
-3. Assigns to a milestone in ROADMAP.md
-4. Notes any risks in RISKS.md
+Agente PM:
+1. Cria histórias de usuário em `BACKLOG.md` com critérios de aceitação
+2. Atualiza `PRD.md` com a descrição da funcionalidade
+3. Atribui a um marco em `ROADMAP.md`
+4. Registra riscos em `RISKS.md`
 ```
 
 ---
 
-## Software Engineer Agent
+## Agente Software Engineer (Engenharia)
 
 **Owns:** `software_engineer/CODING_CONVENTIONS.md`, `TECH_STACK.md`, `DATABASE_SCHEMA.md`, `app/`
 
-### Common Tasks
+### Tarefas comuns
 
-| Task | Prompt Example |
+| Tarefa | Exemplo de prompt |
 |------|----------------|
-| Implement feature | "As Eng agent, implement BL-005 following our conventions" |
-| Add database table | "As Eng agent, add a `user_profiles` table following DATABASE_SCHEMA.md" |
-| Review architecture | "As Eng agent, should we use SSR or CSR for this page?" |
-| Create ADR | "As Eng agent, create an ADR for choosing Supabase as our backend" |
+| Implementar funcionalidade | "Como agente Eng, implemente BL-005 seguindo nossas convenções" |
+| Adicionar tabela no banco | "Como agente Eng, adicione a tabela `user_profiles` seguindo DATABASE_SCHEMA.md" |
+| Revisar arquitetura | "Como agente Eng, devemos usar SSR ou CSR para esta página?" |
+| Criar ADR | "Como agente Eng, crie um ADR sobre escolher Supabase como backend" |
 
-### Example Workflow
+### Exemplo de workflow
 
 ```markdown
-User: "Implement the user profile feature (BL-005)"
+Usuário: "Implemente a funcionalidade de perfil de usuário (BL-005)"
 
-Eng Agent:
-1. Reads acceptance criteria from BACKLOG.md
-2. Follows CODING_CONVENTIONS.md for code style
-3. Creates database migration per DATABASE_SCHEMA.md patterns
-4. Implements in app/ using TECH_STACK.md technologies
-5. Updates PLAN.md and marks BL-005 as Done
+Agente Eng:
+1. Lê os critérios de aceitação em `BACKLOG.md`
+2. Segue `CODING_CONVENTIONS.md` para estilo de código
+3. Cria migração do banco conforme `DATABASE_SCHEMA.md`
+4. Implementa em `app/` usando a stack de `TECH_STACK.md`
+5. Atualiza `PLAN.md` e marca BL-005 como concluído
 ```
 
 ---
 
-## UX/UI Designer Agent
+## Agente UX/UI Designer
 
 **Owns:** `ux_ui_designer/DESIGN_SYSTEM.md`, `UI_SPEC.md`, `UX_FLOW.md`
 
-### Common Tasks
+### Tarefas comuns
 
-| Task | Prompt Example |
+| Tarefa | Exemplo de prompt |
 |------|----------------|
-| Design component | "As UX agent, design a profile card component following our design system" |
-| Document flow | "As UX agent, create a user journey for the checkout process in UX_FLOW.md" |
-| Specify page | "As UX agent, document the dashboard page layout in UI_SPEC.md" |
+| Desenhar componente | "Como agente UX, desenhe um componente de card de perfil seguindo o design system" |
+| Documentar fluxo | "Como agente UX, crie uma jornada do usuário para o checkout em UX_FLOW.md" |
+| Especificar página | "Como agente UX, documente o layout do dashboard em UI_SPEC.md" |
 
-### Example Workflow
+### Exemplo de workflow
 
 ```markdown
-User: "Design the onboarding flow"
+Usuário: "Desenhe o fluxo de onboarding"
 
-UX Agent:
-1. Documents user journey in UX_FLOW.md
-2. Specifies each screen in UI_SPEC.md
-3. Ensures components use DESIGN_SYSTEM.md tokens
-4. Notes interaction patterns and edge cases
+Agente UX:
+1. Documenta a jornada do usuário em `UX_FLOW.md`
+2. Especifica cada tela em `UI_SPEC.md`
+3. Garante que os componentes usem tokens de `DESIGN_SYSTEM.md`
+4. Registra padrões de interação e casos de borda
 ```
 
 ---
 
-## GitHub Agent
+## Agente GitHub
 
 **Owns:** `.github/` templates, repository hygiene
 
-### Common Tasks
+### Tarefas comuns
 
-| Task | Prompt Example |
+| Tarefa | Exemplo de prompt |
 |------|----------------|
-| Create issue | "As GitHub agent, create an issue for the bug in user login" |
-| Review PR checklist | "As GitHub agent, verify this PR meets our DoD" |
-| Setup workflows | "As GitHub agent, add a CI workflow for running tests" |
+| Criar issue | "Como agente GitHub, crie uma issue para o bug no login" |
+| Revisar checklist do PR | "Como agente GitHub, verifique se este PR atende ao DoD" |
+| Configurar workflows | "Como agente GitHub, adicione um workflow de CI para rodar testes" |
 
 ---
 
-## Plan Guardian Agent
+## Agente Plan Guardian
 
 **Owns:** `PLAN.md`, `plan.json`, consistency checks
 
-### Common Tasks
+### Tarefas comuns
 
-| Task | Prompt Example |
+| Tarefa | Exemplo de prompt |
 |------|----------------|
-| Sync plan files | "As Plan Guardian, ensure PLAN.md and plan.json are in sync" |
-| Validate changes | "As Plan Guardian, run guardrail checks before I merge" |
-| Update progress | "As Plan Guardian, mark completed items in PLAN.md" |
+| Sincronizar arquivos do plano | "Como Plan Guardian, garanta que PLAN.md e plan.json estejam em sincronia" |
+| Validar mudanças | "Como Plan Guardian, rode os checks de guardrails antes de eu fazer merge" |
+| Atualizar progresso | "Como Plan Guardian, marque itens concluídos em PLAN.md" |
 
 ---
 
-## Multi-Agent Collaboration
+## Colaboração multiagente
 
 For complex features, agents collaborate:
 
 ```markdown
-User: "Build a complete user authentication system"
+Usuário: "Construa um sistema completo de autenticação de usuários"
 
-1. PM Agent → Writes requirements in PRD.md, creates backlog items
-2. UX Agent → Designs login/signup flows, documents in UI_SPEC.md
-3. Eng Agent → Implements auth using Supabase, follows UX specs
-4. GitHub Agent → Creates tracking issue, reviews PR
-5. Plan Guardian → Updates PLAN.md, validates documentation
+1. Agente PM → escreve requisitos em `PRD.md`, cria itens de backlog
+2. Agente UX → desenha fluxos de login/cadastro, documenta em `UI_SPEC.md`
+3. Agente Eng → implementa autenticação com Supabase, segue specs de UX
+4. Agente GitHub → cria issue de tracking, revisa PR
+5. Plan Guardian → atualiza `PLAN.md`, valida documentação
 ```
 
 ---
 
-## Tips for Effective Use
+## Dicas para uso eficaz
 
-1. **Be specific** — Reference backlog items (BL-XXX) and file names
-2. **Start with PM** — Define requirements before implementation
-3. **Update docs** — Ask agents to update their specs after changes
-4. **Run guardrails** — Use `python3 scripts/check_markdown_links.py` before commits
-5. **Record decisions** — Use DECISIONS.md for lightweight choices, ADRs for architecture
+1. **Seja específico** — referencie itens de backlog (BL-XXX) e nomes de arquivos
+2. **Comece pelo PM** — defina requisitos antes de implementar
+3. **Atualize docs** — peça para os agentes atualizarem specs após mudanças
+4. **Rode guardrails** — use `python3 scripts/check_markdown_links.py` antes de commits
+5. **Registre decisões** — use `DECISIONS.md` para decisões leves e ADRs para arquitetura

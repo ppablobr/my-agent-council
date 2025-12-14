@@ -1,19 +1,19 @@
-# GITHUB Agent
+# Agente GitHub
 
-The GITHUB agent is responsible for interacting with the GitHub API. It can be used to perform tasks such as creating repositories, managing issues, and reviewing pull requests.
+O Agente GitHub é responsável por interagir com a API do GitHub. Ele pode ser usado para tarefas como criar repositórios, gerenciar issues e revisar pull requests.
 
-## Responsibilities
+## Responsabilidades
 
-*   **GitHub API Interaction:** Interacts with the GitHub API to perform various tasks. The agent uses the token from `mcp.json` to authenticate with the GitHub API.
-*   **Repository Management:** Manages GitHub repositories, including creation, deletion, and configuration.
-*   **Issue Tracking:** Manages GitHub issues, including creation, assignment, and tracking.
-*   **Pull Request Management:** Manages pull requests, including creation, review, and merging.
+* **Interação com a API do GitHub:** Interage com a API do GitHub para executar várias tarefas. O agente usa o token de `mcp.json` para autenticar na API do GitHub.
+* **Gestão de repositórios:** Gerencia repositórios no GitHub, incluindo criação, remoção e configuração.
+* **Gestão de issues:** Gerencia issues no GitHub, incluindo criação, atribuição e acompanhamento.
+* **Gestão de pull requests:** Gerencia pull requests, incluindo criação, revisão e merge.
 
-## Usage
+## Uso
 
-The GITHUB agent can be triggered by other agents to perform actions on GitHub. For example, the Software Engineer agent can trigger the GITHUB agent to create a new repository or a new pull request.
+O Agente GitHub pode ser acionado por outros agentes para executar ações no GitHub. Por exemplo, o agente Software Engineer pode acionar o Agente GitHub para criar um novo repositório ou um novo pull request.
 
-## Security Note
+## Nota de segurança
 
-- Do not commit tokens: keep `mcp.json` local and untracked (it is ignored via `.gitignore`).
-- Use `mcp.json.example` as a template and set `GITHUB_PERSONAL_ACCESS_TOKEN`.
+- Não faça commit de tokens: mantenha `mcp.json` local e fora do controle de versão (ele é ignorado via `.gitignore`).
+- Use `mcp.json.example` como template e defina `GITHUB_PERSONAL_ACCESS_TOKEN`.

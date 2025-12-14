@@ -1,32 +1,32 @@
-# Project Structure
+# Estrutura do projeto
 
-This document outlines the project structure.
+Este documento descreve a estrutura do projeto.
 
-## Root Directory
+## Diretório raiz
 
-The root directory contains the following files and directories:
+A raiz do repositório contém os seguintes arquivos e diretórios:
 
-- `PLAN.md`: The project plan, showing the entire planning history.
-- `plan.json`: A machine-readable representation of the project plan.
-- `AGENTS.md`: A document defining the roles and responsibilities of the agents.
-- `AGENT_MASTER.md`: A document defining the role and responsibilities of the Master Agent.
-- `PLAN_MAINTENANCE.md`: A document describing the process for keeping the plan up-to-date.
-- `BACKLOG.md`: The prioritized work items (user stories, chores, bugs).
-- `ROADMAP.md`: Milestones and scope-freeze boundaries.
-- `RISKS.md`: Active risk register with mitigations.
-- `DECISIONS.md`: High-signal product/process decision log.
-- `docs/adr/`: Architecture Decision Records (technical decisions).
-- `scripts/`: Local scripts used by CI/guardrails.
-- `.github/`: GitHub templates and CI workflows.
-- `product_manager/`: A directory containing the documentation for the Product Manager agent.
-- `software_engineer/`: A directory containing the documentation for the Software Engineer agent.
-- `ux_ui_designer/`: A directory containing the documentation for the UX/UI Designer agent.
-- `github_agent/`: A directory containing the documentation for the GITHUB agent.
-- `plan_guardian/`: A directory containing the documentation for the Plan Guardian Agent.
-- `app/`: A directory containing the application source code.
+- `PLAN.md`: o plano do projeto, com histórico completo de planejamento.
+- `plan.json`: representação legível por máquina do plano do projeto.
+- `AGENTS.md`: papéis e responsabilidades dos agentes.
+- `AGENT_MASTER.md`: papel e responsabilidades do Master Agent.
+- `PLAN_MAINTENANCE.md`: processo para manter o plano atualizado.
+- `BACKLOG.md`: itens priorizados (histórias, chores, bugs).
+- `ROADMAP.md`: marcos e limites de congelamento de escopo.
+- `RISKS.md`: registro de riscos ativos com mitigações.
+- `DECISIONS.md`: log de decisões de produto/processo (alto sinal).
+- `docs/adr/`: ADRs (decisões técnicas).
+- `scripts/`: scripts locais usados pelos guardrails/CI.
+- `.github/`: templates do GitHub e workflows de CI.
+- `product_manager/`: documentação do agente Product Manager.
+- `software_engineer/`: documentação do agente Software Engineer.
+- `ux_ui_designer/`: documentação do agente UX/UI Designer.
+- `github_agent/`: documentação do agente GitHub.
+- `plan_guardian/`: documentação do agente Plan Guardian.
+- `app/`: código-fonte da aplicação.
 
-## Product Manager Docs
+## Docs do Product Manager
 
-- `product_manager/PRD.md`: Product requirements and high-level scope.
-- `product_manager/GOVERNANCE.md`: Decision rights, escalation, and cadence.
-- `product_manager/PROJECT_RULES.md`: Definition of Done, traceability, and change control.
+- `product_manager/PRD.md`: requisitos do produto e escopo de alto nível.
+- `product_manager/GOVERNANCE.md`: direitos de decisão, escalonamento e cadência.
+- `product_manager/PROJECT_RULES.md`: Definition of Done, rastreabilidade e controle de mudanças.

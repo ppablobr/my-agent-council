@@ -1,19 +1,19 @@
-# Coding Conventions
+# Convenções de código
 
-This document outlines the coding conventions for the project, aligned with the tech stack (Vite, React, Tailwind CSS, shadcn/ui, Supabase).
+Este documento descreve as convenções de código do projeto, alinhadas com a stack (Vite, React, Tailwind CSS, shadcn/ui, Supabase).
 
-## File Naming
+## Nomes de arquivos
 
-| Type | Convention | Example |
+| Tipo | Convenção | Exemplo |
 | --- | --- | --- |
-| React components | PascalCase | `UserProfile.tsx` |
-| Hooks | camelCase with `use` prefix | `useAuth.ts` |
-| Utilities | camelCase | `formatDate.ts` |
+| Componentes React | PascalCase | `UserProfile.tsx` |
+| Hooks | camelCase com prefixo `use` | `useAuth.ts` |
+| Utilitários | camelCase | `formatDate.ts` |
 | Types/Interfaces | PascalCase | `types.ts` → `User`, `ApiResponse` |
-| Constants | SCREAMING_SNAKE_CASE | `API_ENDPOINTS.ts` |
-| Test files | `*.test.ts` or `*.spec.ts` | `UserProfile.test.tsx` |
+| Constantes | SCREAMING_SNAKE_CASE | `API_ENDPOINTS.ts` |
+| Arquivos de teste | `*.test.ts` ou `*.spec.ts` | `UserProfile.test.tsx` |
 
-## Directory Structure
+## Estrutura de diretórios
 
 ```
 app/
@@ -28,15 +28,15 @@ app/
 │   └── styles/           # Global styles
 ```
 
-## TypeScript Conventions
+## Convenções de TypeScript
 
-- **Prefer `interface` over `type`** for object shapes (better error messages).
-- **Explicit return types** on exported functions.
-- **Avoid `any`**; use `unknown` when type is truly unknown.
-- **Use `readonly`** for props and immutable data.
+- **Prefira `interface` em vez de `type`** para shapes de objetos (melhores mensagens de erro).
+- **Tipos de retorno explícitos** em funções exportadas.
+- **Evite `any`**; use `unknown` quando o tipo for realmente desconhecido.
+- **Use `readonly`** para props e dados imutáveis.
 
 ```typescript
-// ✅ Good
+// ✅ Bom
 interface UserProps {
   readonly id: string;
   readonly name: string;
@@ -46,16 +46,16 @@ export function formatUser(user: UserProps): string {
   return `${user.name} (${user.id})`;
 }
 
-// ❌ Avoid
+// ❌ Evite
 export const formatUser = (user: any) => user.name;
 ```
 
-## React Component Conventions
+## Convenções de componentes React
 
-- **Functional components only** (no class components).
-- **Props interface** named `[ComponentName]Props`.
-- **Destructure props** in function signature.
-- **Export as named export** (default export only for pages).
+- **Apenas componentes funcionais** (sem class components).
+- **Interface de props** com nome `[ComponentName]Props`.
+- **Desestruture props** na assinatura da função.
+- **Exporte como named export** (default export apenas para páginas).
 
 ```tsx
 interface UserCardProps {
@@ -72,15 +72,15 @@ export function UserCard({ user, onSelect }: UserCardProps) {
 }
 ```
 
-## Import Order
+## Ordem de imports
 
-Organize imports in this order (with blank lines between groups):
+Organize imports nesta ordem (com linhas em branco entre grupos):
 
-1. React and framework imports
-2. Third-party libraries
-3. Internal aliases (`@/`)
-4. Relative imports
-5. Type imports
+1. Imports de React e framework
+2. Bibliotecas de terceiros
+3. Aliases internos (`@/`)
+4. Imports relativos
+5. Imports de tipos
 
 ```typescript
 import { useState, useEffect } from 'react';
@@ -95,11 +95,11 @@ import { UserAvatar } from './UserAvatar';
 import type { User } from '@/types';
 ```
 
-## Styling with Tailwind
+## Estilização com Tailwind
 
-- **Use Tailwind classes** directly in JSX.
-- **Use `cn()` helper** for conditional classes (from shadcn/ui).
-- **Extract repeated patterns** into components, not utility classes.
+- **Use classes do Tailwind** diretamente no JSX.
+- **Use o helper `cn()`** para classes condicionais (do shadcn/ui).
+- **Extraia padrões repetidos** para componentes, não para “utility classes”.
 
 ```tsx
 import { cn } from '@/lib/utils';
@@ -107,11 +107,11 @@ import { cn } from '@/lib/utils';
 <Button className={cn('w-full', isDisabled && 'opacity-50')} />
 ```
 
-## Error Handling
+## Tratamento de erros
 
-- **Use Result pattern** for functions that can fail.
-- **Throw only for truly exceptional cases** (bugs, invariant violations).
-- **Log errors** with context before surfacing to UI.
+- **Use o padrão Result** para funções que podem falhar.
+- **Use throw apenas para casos realmente excepcionais** (bugs, violações de invariantes).
+- **Logue erros** com contexto antes de expor na UI.
 
 ```typescript
 type Result<T, E = Error> = 
@@ -129,19 +129,19 @@ async function fetchUser(id: string): Promise<Result<User>> {
 }
 ```
 
-## Comments and Documentation
+## Comentários e documentação
 
-- **JSDoc for public APIs** (exported functions, hooks, components).
-- **Inline comments** only for non-obvious logic.
-- **TODO format:** `// TODO(owner): description [link-to-issue]`
+- **JSDoc para APIs públicas** (funções, hooks, componentes exportados).
+- **Comentários inline** apenas para lógica não óbvia.
+- **Formato de TODO:** `// TODO(owner): descrição [link-para-issue]`
 
 ```typescript
 /**
- * Formats a date for display in the UI.
+ * Formata uma data para exibição na UI.
  * @param date - ISO date string or Date object
- * @param locale - BCP 47 locale string (default: 'en-US')
+ * @param locale - locale BCP 47 (padrão: 'pt-BR')
  */
-export function formatDate(date: string | Date, locale = 'en-US'): string {
+export function formatDate(date: string | Date, locale = 'pt-BR'): string {
   // ...
 }
 ```

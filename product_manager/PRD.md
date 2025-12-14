@@ -1,37 +1,37 @@
-# Product Requirements Document (PRD)
+# Documento de Requisitos do Produto (PRD)
 
-This document outlines the requirements for the product.
+Este documento descreve os requisitos do produto.
 
-## Vision
+## Visão
 
-What are we building, for whom, and why?
+O que estamos construindo, para quem e por quê?
 
-## Problem Statement
+## Declaração do problema
 
-What pain exists today? What is the cost of not solving it?
+Que dor existe hoje? Qual o custo de não resolver?
 
-## Target Users / Personas
+## Usuários-alvo / personas
 
 - Persona 1:
 - Persona 2:
 
-## Goals
+## Objetivos
 
-- Goal:
+- Objetivo:
 
-## Non-Goals
+## Não objetivos
 
-- Non-goal:
+- Não objetivo:
 
-## User Stories (High-Level)
+## Histórias de usuário (alto nível)
 
-Keep the detailed, prioritized items in `BACKLOG.md`. This section is for major capabilities only.
+Mantenha os itens detalhados e priorizados em `BACKLOG.md`. Esta seção é apenas para capacidades grandes.
 
-## Success Metrics
+## Métricas de sucesso
 
-- Metric:
+- Métrica:
 
-## Constraints and Assumptions
+## Restrições e premissas
 
-- Constraint:
-- Assumption:
+- Restrição:
+- Premissa:

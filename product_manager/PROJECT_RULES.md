@@ -1,44 +1,44 @@
-# Project Rules
+# Regras do projeto
 
-This document outlines the project rules.
+Este documento descreve as regras do projeto.
 
-## Plan Management
+## Gestão do plano
 
-- The `PLAN.md` file in the root directory is the single source of truth for the project plan.
-- The `PLAN.md` file must show the entire planning history, with completed tasks marked with `[x]`.
-- The `plan.json` file is a machine-readable representation of the plan, and is kept in sync with `PLAN.md`.
+- O arquivo `PLAN.md` na raiz é a única fonte de verdade do plano do projeto.
+- `PLAN.md` deve mostrar todo o histórico do planejamento, com tarefas concluídas marcadas com `[x]`.
+- `plan.json` é uma representação legível por máquina do plano e deve ficar em sincronia com `PLAN.md`.
 
 ## Definition of Done (DoD)
 
-A work item is considered “done” only when all applicable criteria are met:
+Um item de trabalho só é considerado “concluído” quando todos os critérios aplicáveis forem atendidos:
 
-- **Clear acceptance criteria:** The user story has testable acceptance criteria (ideally in Gherkin form).
-- **Docs updated:** Any impacted specs are updated (`PRD.md`, `STRUCTURE.md`, `PROJECT_RULES.md`, UX docs, and/or ADR/decision log).
-- **Changelog updated:** User-facing changes are documented in `CHANGELOG.md` under `[Unreleased]`.
-- **Quality gates:** Relevant tests and lint checks pass (or are explicitly documented as out-of-scope with a reason).
-- **Traceability:** Pull requests reference the related story/issue and include a short summary of user impact.
-- **Risk review:** New risks are added to `RISKS.md` when discovered; mitigations are proposed.
+- **Critérios de aceitação claros:** a história tem critérios testáveis (idealmente em Gherkin).
+- **Docs atualizadas:** specs impactadas são atualizadas (`PRD.md`, `STRUCTURE.md`, `PROJECT_RULES.md`, docs de UX e/ou ADR/log de decisões).
+- **Changelog atualizado:** mudanças visíveis ao usuário são registradas em `CHANGELOG.md` em `[Unreleased]`.
+- **Gates de qualidade:** testes e lint relevantes passando (ou explicitamente fora de escopo com motivo).
+- **Rastreabilidade:** PRs referenciam a história/issue relacionada e incluem um resumo curto do impacto no usuário.
+- **Revisão de riscos:** novos riscos são adicionados a `RISKS.md` quando descobertos, com propostas de mitigação.
 
-## User Story Format (Template)
+## Formato de história de usuário (template)
 
-Use this template for any backlog item that represents user value:
+Use este template para qualquer item do backlog que represente valor para o usuário:
 
-- **Title:** Short and specific
-- **Story:** As a `<persona>`, I want `<capability>`, so that `<benefit>`.
-- **Context:** Why now? What problem are we solving?
-- **Acceptance criteria (Gherkin):**
-  - Given `<state>`, when `<action>`, then `<outcome>`.
-- **Non-goals:** What is explicitly not included?
-- **Edge cases:** Error states, empty states, performance constraints
-- **Dependencies:** APIs, other stories, decisions/ADRs
+- **Título:** curto e específico
+- **História:** como `<persona>`, eu quero `<capacidade>`, para `<benefício>`.
+- **Contexto:** por que agora? qual problema estamos resolvendo?
+- **Critérios de aceitação (Gherkin):**
+  - Dado `<estado>`, quando `<ação>`, então `<resultado>`.
+- **Não objetivos:** o que explicitamente não está incluído?
+- **Casos de borda:** erros, estados vazios, restrições de performance
+- **Dependências:** APIs, outras histórias, decisões/ADRs
 
-## Scope, Milestones, and Change Control
+## Escopo, marcos e controle de mudanças
 
-- Work is organized into **milestones** in `ROADMAP.md`.
-- When a milestone starts, its scope is **frozen**: changes require PM approval and must be recorded as a new backlog item (do not silently rewrite in-progress stories).
-- Bug fixes and critical security issues are allowed within a frozen milestone; they must still be logged and linked to the milestone.
+- O trabalho é organizado em **marcos** em `ROADMAP.md`.
+- Ao iniciar um marco, seu escopo é **congelado**: mudanças exigem aprovação do PM e devem ser registradas como novo item de backlog (não reescreva silenciosamente histórias em andamento).
+- Correções de bug e issues críticas de segurança podem entrar em um marco congelado, mas devem ser registradas e linkadas ao marco.
 
-## Traceability Rules
+## Regras de rastreabilidade
 
-- Every pull request must reference at least one backlog item (issue/story) and describe user-facing impact.
-- If a PR changes product behavior, at least one of the following must be updated: `PRD.md`, `BACKLOG.md`, `ROADMAP.md`, `DECISIONS.md`, or a relevant ADR in `docs/adr/`.
+- Todo pull request deve referenciar pelo menos um item do backlog (issue/história) e descrever o impacto para o usuário.
+- Se um PR mudar o comportamento do produto, pelo menos um dos seguintes arquivos deve ser atualizado: `PRD.md`, `BACKLOG.md`, `ROADMAP.md`, `DECISIONS.md` ou um ADR relevante em `docs/adr/`.

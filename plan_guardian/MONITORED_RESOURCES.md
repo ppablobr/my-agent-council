@@ -1,35 +1,35 @@
-# Monitored Resources
+# Recursos monitorados
 
-This document describes the resources that the Plan Guardian Agent should monitor to ensure that the project plan remains up-to-date.
+Este documento descreve os recursos que o agente Plan Guardian deve monitorar para garantir que o plano do projeto permaneça atualizado.
 
-## Local Files and Directories
+## Arquivos e diretórios locais
 
-The agent should monitor the following local files and directories for changes:
+O agente deve monitorar os seguintes arquivos e diretórios locais:
 
--   `app/`: The application source code. The agent should monitor this directory for new, modified, or deleted files.
--   `.github/`: CI workflows and templates (process guardrails).
--   `scripts/`: Guardrail and validation scripts used by CI.
--   `docs/adr/`: Architecture Decision Records (technical decisions).
--   `product_manager/`: The documentation for the Product Manager agent.
--   `software_engineer/`: The documentation for the Software Engineer agent.
--   `ux_ui_designer/`: The documentation for the UX/UI Designer agent.
--   `github_agent/`: The documentation for the GITHUB agent.
--   `plan_guardian/`: The documentation for the Plan Guardian Agent itself.
--   `*.md`: All markdown files in the root directory, as they may contain important information about the project.
+- `app/`: código-fonte da aplicação. Monitorar arquivos novos, modificados ou removidos.
+- `.github/`: workflows de CI e templates (guardrails de processo).
+- `scripts/`: scripts de validação/guardrails usados no CI.
+- `docs/adr/`: Registros de Decisão de Arquitetura (decisões técnicas).
+- `product_manager/`: documentação do agente Product Manager.
+- `software_engineer/`: documentação do agente Software Engineer.
+- `ux_ui_designer/`: documentação do agente UX/UI Designer.
+- `github_agent/`: documentação do agente GitHub.
+- `plan_guardian/`: documentação do próprio Plan Guardian.
+- `*.md`: todos os arquivos Markdown na raiz, pois podem conter informações importantes do projeto.
 
-## Version Control System
+## Sistema de controle de versão
 
-The agent should monitor the Git repository for the following events:
+O agente deve monitorar o repositório Git para os seguintes eventos:
 
--   **New commits:** The agent should analyze the commit messages to identify the purpose of the changes.
--   **New branches:** The agent should monitor new branches to see if they are related to a specific feature or bug fix.
--   **New pull requests:** The agent should monitor new pull requests to see if they are ready to be merged.
+- **Novos commits:** analisar mensagens para identificar o objetivo das mudanças.
+- **Novas branches:** acompanhar branches para entender se se relacionam a feature/bug específico.
+- **Novos pull requests:** acompanhar PRs para verificar se estão prontos para merge.
 
-## Cloud Resources (Future)
+## Recursos em nuvem (futuro)
 
-In the future, the agent could be extended to monitor cloud resources, such as:
+No futuro, o agente pode ser estendido para monitorar recursos de nuvem, como:
 
--   **AWS GuardDuty:** To detect security threats.
--   **AWS Route 53 Recovery Control Config:** To ensure the resilience of the application.
+- **AWS GuardDuty:** para detectar ameaças de segurança.
+- **AWS Route 53 Recovery Control Config:** para garantir resiliência da aplicação.
 
-By monitoring these resources, the Plan Guardian Agent can provide a comprehensive view of the project's status and ensure that the project plan is always up-to-date.
+Ao monitorar esses recursos, o Plan Guardian pode fornecer uma visão abrangente do status do projeto e garantir que o plano esteja sempre atualizado.

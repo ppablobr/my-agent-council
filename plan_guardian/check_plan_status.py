@@ -9,21 +9,21 @@ def get_file_modification_timestamp(filepath):
     return datetime.datetime.fromtimestamp(os.path.getmtime(filepath))
 
 def generate_plan_md_content(plan_data):
-    """Generates markdown content for PLAN.md from plan_data."""
-    md_content = "# Project Plan\n\n"
-    md_content += "This document outlines the plan for creating a multi-agent system for software development.\n\n"
+    """Gera o conteúdo Markdown do PLAN.md a partir do plan_data."""
+    md_content = "# Plano do projeto\n\n"
+    md_content += "Este documento descreve o plano para criar um sistema multiagente para desenvolvimento de software.\n\n"
 
     for phase in plan_data.get("phases", []):
-        md_content += f"## {phase.get('name', 'Unnamed Phase')}\n\n"
+        md_content += f"## {phase.get('name', 'Fase sem nome')}\n\n"
         for step in phase.get("steps", []):
             status_marker = "[x]" if step.get("status") == "completed" else "[ ]"
-            md_content += f"- {status_marker} {step.get('name', 'Unnamed Step')}\n"
+            md_content += f"- {status_marker} {step.get('name', 'Passo sem nome')}\n"
         md_content += "\n"
     return md_content
 
 def check_and_update_plan_md():
     """
-    Checks if PLAN.md is outdated compared to plan.json and updates it if necessary.
+    Verifica se PLAN.md está desatualizado em relação ao plan.json e atualiza se necessário.
     """
     plan_json_path = "plan.json"
     plan_md_path = "PLAN.md"
@@ -32,11 +32,11 @@ def check_and_update_plan_md():
     plan_md_timestamp = get_file_modification_timestamp(plan_md_path)
 
     if plan_json_timestamp is None:
-        print(f"Error: {plan_json_path} not found. Cannot check plan status.")
+        print(f"Erro: {plan_json_path} não encontrado. Não foi possível verificar o status do plano.")
         return False
 
     if plan_md_timestamp is None or plan_json_timestamp > plan_md_timestamp:
-        print(f"{plan_md_path} is outdated or does not exist. Regenerating from {plan_json_path}...")
+        print(f"{plan_md_path} está desatualizado ou não existe. Regenerando a partir de {plan_json_path}...")
         try:
             with open(plan_json_path, 'r') as f:
                 plan_data = json.load(f)
@@ -44,13 +44,13 @@ def check_and_update_plan_md():
             md_content = generate_plan_md_content(plan_data)
             with open(plan_md_path, 'w') as f:
                 f.write(md_content)
-            print(f"Successfully regenerated {plan_md_path}.")
+            print(f"{plan_md_path} regenerado com sucesso.")
             return True
         except Exception as e:
-            print(f"Error regenerating {plan_md_path}: {e}")
+            print(f"Erro ao regenerar {plan_md_path}: {e}")
             return False
     else:
-        print(f"{plan_md_path} is up-to-date.")
+        print(f"{plan_md_path} está atualizado.")
         return True
 
 if __name__ == "__main__":

@@ -1,95 +1,95 @@
-# UX Flow
+# Fluxos de UX
 
-This document defines user experience flows and journey mapping for the project.
+Este documento define fluxos de experiência do usuário e mapeamento de jornadas para o projeto.
 
-## User Journey Format
+## Formato de jornada do usuário
 
-Document each major user journey using this template:
+Documente cada jornada principal usando este template:
 
 ```markdown
-## [Journey Name]
+## [Nome da jornada]
 
 ### Goal
-What the user is trying to accomplish.
+O que o usuário está tentando realizar.
 
 ### Trigger
-What initiates this journey (link click, notification, etc.)
+O que inicia a jornada (clique em link, notificação etc.).
 
 ### Steps
-1. User sees [page/element]
-2. User performs [action]
-3. System responds with [feedback]
+1. Usuário vê [página/elemento]
+2. Usuário realiza [ação]
+3. Sistema responde com [feedback]
 4. ...
 
 ### Success Criteria
-How do we know the journey succeeded?
+Como sabemos que a jornada foi bem-sucedida?
 
 ### Error Paths
-- If [condition], show [error state]
-- If [condition], redirect to [fallback]
+- Se [condição], mostrar [estado de erro]
+- Se [condição], redirecionar para [fallback]
 ```
 
-## Flow Diagram Conventions
+## Convenções de diagrama de fluxo
 
-Use Mermaid diagrams for visualizing flows:
+Use diagramas Mermaid para visualizar fluxos:
 
 ```mermaid
 flowchart TD
-    A[Start] --> B{Decision}
-    B -->|Yes| C[Action 1]
-    B -->|No| D[Action 2]
-    C --> E[End]
+    A[Início] --> B{Decisão}
+    B -->|Sim| C[Ação 1]
+    B -->|Não| D[Ação 2]
+    C --> E[Fim]
     D --> E
 ```
 
-### Node Types
+### Tipos de nós
 
-| Shape | Syntax | Usage |
+| Forma | Sintaxe | Uso |
 | --- | --- | --- |
-| Rectangle | `[text]` | Actions, pages |
-| Diamond | `{text}` | Decisions |
-| Rounded | `(text)` | Start/End |
-| Circle | `((text))` | Connectors |
+| Retângulo | `[text]` | Ações, páginas |
+| Losango | `{text}` | Decisões |
+| Arredondado | `(text)` | Início/Fim |
+| Círculo | `((text))` | Conectores |
 
 ## Interaction Patterns
 
 ### Navigation
 
-| Pattern | Usage | Implementation |
+| Padrão | Uso | Implementação |
 | --- | --- | --- |
-| Link | Navigate to new page | `<Link to="/path">` |
-| Modal | Contextual action | Open overlay, no URL change |
-| Drawer | Secondary content | Slide-in panel |
-| Tab | Switch content | URL param or state |
+| Link | Navegar para nova página | `<Link to="/path">` |
+| Modal | Ação contextual | Abrir overlay, sem mudar URL |
+| Drawer | Conteúdo secundário | Painel que desliza |
+| Aba | Trocar conteúdo | Param na URL ou state |
 
 ### Feedback
 
-| Event | Feedback | Timing |
+| Evento | Feedback | Momento |
 | --- | --- | --- |
-| Form submit | Loading spinner | Immediate |
-| Success | Toast + redirect | After response |
-| Error | Inline message | After response |
-| Validation | Field-level error | On blur or submit |
+| Envio de formulário | Loading spinner | Imediato |
+| Sucesso | Toast + redirect | Após resposta |
+| Erro | Mensagem inline | Após resposta |
+| Validação | Erro por campo | Ao sair do campo ou ao enviar |
 
 ### Loading States
 
-1. **Skeleton**: For content that has a predictable shape
-2. **Spinner**: For actions with unknown duration
-3. **Progress bar**: For uploads or multi-step processes
+1. **Skeleton**: para conteúdo com forma previsível
+2. **Spinner**: para ações com duração desconhecida
+3. **Barra de progresso**: para uploads ou processos em múltiplas etapas
 
 ## Micro-interactions
 
-| Interaction | Animation | Purpose |
+| Interação | Animação | Propósito |
 | --- | --- | --- |
-| Button click | Scale down briefly | Tactile feedback |
-| Hover | Color/shadow change | Affordance |
-| Modal open | Fade + slide up | Draw attention |
-| Toast appear | Slide in from edge | Non-intrusive alert |
+| Clique no botão | Reduzir escala rapidamente | Feedback tátil |
+| Hover | Mudança de cor/sombra | Affordance |
+| Abrir modal | Fade + slide up | Chamar atenção |
+| Toast aparecer | Entrar pela borda | Alerta não intrusivo |
 
 ---
 
 ## User Journeys
 
-> **Note:** Document each major journey below as it is designed.
+> **Nota:** documente cada jornada principal abaixo conforme for desenhada.
 
 _No journeys documented yet._

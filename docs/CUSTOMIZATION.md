@@ -1,93 +1,93 @@
-# Customization Guide
+# Guia de personalização
 
-This guide explains how to adapt the Agent Council to your specific project needs.
+Este guia explica como adaptar o Agent Council às necessidades do seu projeto.
 
-## Customizing the Tech Stack
+## Personalizando a stack técnica
 
-### 1. Update `software_engineer/TECH_STACK.md`
+### 1. Atualize `software_engineer/TECH_STACK.md`
 
-Replace the default stack with your choices:
+Substitua a stack padrão pelas suas escolhas:
 
 ```markdown
-# Tech Stack
+# Stack técnica
 
 - **Frontend:** Next.js, TypeScript, Chakra UI
 - **Backend:** Node.js, Express, PostgreSQL
 - **Infrastructure:** AWS, Docker
 ```
 
-### 2. Update Related Specs
+### 2. Atualize specs relacionadas
 
-After changing the stack, update:
+Depois de mudar a stack, atualize:
 
-| File | What to Change |
+| Arquivo | O que mudar |
 |------|----------------|
-| `CODING_CONVENTIONS.md` | Adjust conventions for your language/framework |
-| `DATABASE_SCHEMA.md` | Update for your database (PostgreSQL, MongoDB, etc.) |
-| `DESIGN_SYSTEM.md` | Align with your UI library |
+| `CODING_CONVENTIONS.md` | Ajuste as convenções para sua linguagem/framework |
+| `DATABASE_SCHEMA.md` | Atualize para o seu banco (PostgreSQL, MongoDB etc.) |
+| `DESIGN_SYSTEM.md` | Alinhe com sua biblioteca de UI |
 
 ---
 
-## Customizing Agent Roles
+## Personalizando papéis dos agentes
 
-### Adding a New Agent
+### Adicionando um novo agente
 
-1. **Create agent directory:**
+1. **Crie o diretório do agente:**
 
 ```bash
 mkdir qa_engineer
 ```
 
-2. **Add README.md with responsibilities:**
+2. **Adicione um README.md com responsabilidades:**
 
 ```markdown
-# QA Engineer Agent
+# Agente QA Engineer
 
-The QA Engineer is responsible for testing strategy and quality assurance.
+O QA Engineer é responsável por estratégia de testes e garantia de qualidade.
 
-**Responsibilities:**
-- Test plan creation
-- Test case documentation
-- Bug triage and verification
+**Responsabilidades:**
+- Criação de plano de testes
+- Documentação de casos de teste
+- Triagem e verificação de bugs
 ```
 
-3. **Update `AGENTS.md`** to include the new agent in the roster and interaction flow.
+3. **Atualize `AGENTS.md`** para incluir o novo agente na lista e no fluxo de interação.
 
-4. **Update `product_manager/GOVERNANCE.md`** to add RACI entries for the new agent.
+4. **Atualize `product_manager/GOVERNANCE.md`** para adicionar entradas RACI para o novo agente.
 
-### Modifying Agent Responsibilities
+### Modificando responsabilidades de agentes
 
-Edit `AGENTS.md` to reassign tasks. For example, to have the PM agent own technical documentation:
+Edite `AGENTS.md` para redistribuir responsabilidades. Por exemplo, para fazer o PM ficar responsável por documentação técnica:
 
 ```markdown
-## Product Manager Agent
+## Agente Product Manager (PM)
 
-**Responsibilities:**
+**Responsabilidades:**
 - ...existing items...
-- **Technical Documentation:** Owns API documentation and integration guides
+- **Documentação técnica:** responsável por documentação de API e guias de integração
 ```
 
 ---
 
-## Customizing Governance
+## Personalizando a governança
 
-### Change the Definition of Done
+### Alterar a Definition of Done (DoD)
 
-Edit `product_manager/PROJECT_RULES.md`:
+Edite `product_manager/PROJECT_RULES.md`:
 
 ```markdown
 ## Definition of Done (DoD)
 
-A work item is "done" when:
-- [ ] Code review approved by 2 reviewers
-- [ ] Integration tests pass
-- [ ] Documentation updated
-- [ ] Deployed to staging
+Um item de trabalho está "concluído" quando:
+- [ ] Code review aprovado por 2 revisores
+- [ ] Testes de integração passando
+- [ ] Documentação atualizada
+- [ ] Deploy em staging
 ```
 
-### Adjust RACI Matrix
+### Ajustar a matriz RACI
 
-Edit `product_manager/GOVERNANCE.md` to change accountability:
+Edite `product_manager/GOVERNANCE.md` para mudar responsabilidades:
 
 ```markdown
 | Area | PM | Eng | UX | DevOps |
@@ -98,25 +98,25 @@ Edit `product_manager/GOVERNANCE.md` to change accountability:
 
 ---
 
-## Customizing Guardrails
+## Personalizando guardrails
 
-### Modify CI Checks
+### Modificar checks de CI
 
-Edit `.github/workflows/ci.yml` to add or remove checks:
+Edite `.github/workflows/ci.yml` para adicionar ou remover checks:
 
 ```yaml
-# Add test coverage check
+# Adicionar check de cobertura de testes
 - name: Check coverage
   run: npm test -- --coverage --coverageThreshold='{"global":{"lines":80}}'
 ```
 
-### Add Custom Guardrails
+### Adicionar guardrails customizados
 
 Create a new script in `scripts/guardrails/`:
 
 ```python
 #!/usr/bin/env python3
-"""Check for TODO comments without issue links."""
+"""Verifica comentários TODO sem links de issue."""
 
 import re
 import sys
@@ -128,18 +128,18 @@ def check_todos():
         content = file.read_text()
         for i, line in enumerate(content.splitlines(), 1):
             if 'TODO' in line and not re.search(r'TODO\(.+\):', line):
-                issues.append(f"{file}:{i}: TODO without owner")
+                issues.append(f"{file}:{i}: TODO sem responsável")
     
     if issues:
         print("\\n".join(issues))
         sys.exit(1)
-    print("OK: all TODOs have owners")
+    print("OK: todos os TODOs têm responsável")
 
 if __name__ == "__main__":
     check_todos()
 ```
 
-Add to CI workflow:
+Adicione ao workflow do CI:
 
 ```yaml
 - name: TODO format check
@@ -148,38 +148,38 @@ Add to CI workflow:
 
 ---
 
-## Customizing Templates
+## Personalizando templates
 
-### Issue Templates
+### Templates de issues
 
 Edit files in `.github/ISSUE_TEMPLATE/`:
 
 - `bug_report.yml` — Bug report format
 - `feature_request.yml` — Feature request format
 
-### PR Template
+### Template de PR
 
 Edit `.github/pull_request_template.md` to match your process.
 
-### ADR Template
+### Template de ADR
 
 Edit `docs/adr/0000-template.md` to add sections relevant to your project.
 
 ---
 
-## Customizing MCP Servers
+## Personalizando servidores MCP
 
-MCP (Model Context Protocol) servers enable AI integrations with external services. Configure them in `mcp.json`.
+Servidores MCP (Model Context Protocol) habilitam integrações de IA com serviços externos. Configure em `mcp.json`.
 
-### Initial Setup
+### Setup inicial
 
-Copy the example file and add your credentials:
+Copie o arquivo de exemplo e adicione suas credenciais:
 
 ```bash
 cp mcp.json.example mcp.json
 ```
 
-### Adding Additional MCP Servers
+### Adicionando servidores MCP adicionais
 
 You can add multiple MCP servers to `mcp.json`:
 
@@ -204,34 +204,34 @@ You can add multiple MCP servers to `mcp.json`:
 }
 ```
 
-### Available MCP Servers
+### Servidores MCP disponíveis
 
-| Server | Purpose |
+| Servidor | Finalidade |
 |--------|---------|
-| `@modelcontextprotocol/server-github` | GitHub operations (issues, PRs, repos) |
-| `supabase-mcp-server` | Supabase database and edge functions |
-| `@modelcontextprotocol/server-filesystem` | Local file operations |
+| `@modelcontextprotocol/server-github` | Operações no GitHub (issues, PRs, repositórios) |
+| `supabase-mcp-server` | Banco Supabase e Edge Functions |
+| `@modelcontextprotocol/server-filesystem` | Operações em arquivos locais |
 
 > [!WARNING]
-> Never commit `mcp.json` to version control. Ensure it's listed in `.gitignore`.
+> Nunca faça commit de `mcp.json` no controle de versão. Garanta que esteja listado em `.gitignore`.
 
 ---
 
-## Project-Specific Adaptations
+## Adaptações específicas por tipo de projeto
 
-### For Mobile Apps
+### Para apps mobile
 
 - Add `ios/` and `android/` to structure
 - Create `mobile_engineer/` agent folder
 - Update DESIGN_SYSTEM.md for mobile patterns
 
-### For Microservices
+### Para microserviços
 
 - Create separate folders per service
 - Add `devops/` or `platform_engineer/` agent
 - Update DATABASE_SCHEMA.md for multi-database patterns
 
-### For Teams
+### Para times
 
 - Add team-specific RACI entries
 - Create on-call or rotation documentation

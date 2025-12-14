@@ -1,30 +1,30 @@
 # Guardrails
 
-Guardrails are automated checks that are used to enforce the project rules and policies. They are a key component of our development process, as they help to ensure that the codebase remains consistent, maintainable, and secure.
+Guardrails são verificações automatizadas usadas para reforçar regras e políticas do projeto. Eles são parte importante do processo, pois ajudam a manter o codebase consistente, sustentável e seguro.
 
-The Plan Guardian Agent uses guardrails to monitor the codebase and the project plan. If a guardrail is violated, the agent will take action to correct the problem.
+O agente Plan Guardian usa guardrails para monitorar o codebase e o plano do projeto. Se um guardrail for violado, o agente toma ações para corrigir o problema.
 
-## Example: The Math Guardrail
+## Exemplo: o guardrail de matemática
 
-The `math_guardrail` function is a simple example of a guardrail. This function checks if a given input is a math homework question. If it is, the function returns a response indicating that it cannot answer the question.
+A função `math_guardrail` é um exemplo simples de guardrail. Ela verifica se a entrada é uma pergunta de lição de casa de matemática. Se for, a função retorna uma resposta indicando que não pode responder.
 
-This guardrail is used to prevent the agent from being used to cheat on math homework.
+Esse guardrail serve para evitar que o agente seja usado para “colar” em tarefas de matemática.
 
-## Guardrails in this Project
+## Guardrails neste projeto
 
-In this project, we use guardrails to enforce a variety of rules, including:
+Aqui, usamos guardrails para reforçar várias regras, incluindo:
 
--   **Plan Consistency:** The Plan Guardian Agent uses a guardrail to ensure that the `PLAN.md` file is consistent with the `plan.json` file. If the two files are out of sync, the agent will automatically update the `PLAN.md` file.
--   **Code Style:** We can use a linter as a guardrail to enforce a consistent code style across the project. If a developer commits code that does not conform to the code style, the CI/CD pipeline will fail.
--   **Security:** We can use a security scanner as a guardrail to detect potential security vulnerabilities in the codebase. If a vulnerability is found, the agent will create an issue in the issue tracker.
--   **Resource Management:** Inspired by the AWS GuardDuty and Route 53 Recovery Control Config examples, we can create guardrails to monitor the use of cloud resources and ensure that they are being used efficiently and securely.
+- **Consistência do plano:** o Plan Guardian garante que `PLAN.md` esteja consistente com `plan.json`. Se estiverem fora de sincronia, o agente atualiza automaticamente `PLAN.md`.
+- **Estilo de código:** um linter pode atuar como guardrail para reforçar estilo consistente. Se alguém commitar código fora do padrão, o pipeline falha.
+- **Segurança:** um scanner de segurança pode detectar vulnerabilidades. Se encontrar algo, o agente pode criar uma issue.
+- **Gestão de recursos:** inspirado por exemplos como AWS GuardDuty e Route 53 Recovery Control Config, podemos criar guardrails para monitorar recursos de nuvem e garantir uso eficiente e seguro.
 
-## Implemented Guardrails (Baseline)
+## Guardrails implementados (baseline)
 
-- **Docs integrity:** `scripts/check_markdown_links.py` validates relative links across `*.md`.
-- **Plan consistency:** `scripts/guardrails/check_plan_files_in_sync.py` enforces “change both or change neither” for `PLAN.md` ↔ `plan.json`.
-- **Traceability:** `scripts/guardrails/check_traceability.py` ensures `app/` changes are accompanied by updates to at least one spec artifact (or an explicit override).
+- **Integridade de docs:** `scripts/check_markdown_links.py` valida links relativos em `*.md`.
+- **Consistência do plano:** `scripts/guardrails/check_plan_files_in_sync.py` reforça “mudar ambos ou nenhum” para `PLAN.md` ↔ `plan.json`.
+- **Rastreabilidade:** `scripts/guardrails/check_traceability.py` garante que mudanças em `app/` venham acompanhadas de atualização de ao menos um artefato de spec (ou override explícito).
 
-These run in CI via `.github/workflows/ci.yml`.
+Esses checks rodam no CI via `.github/workflows/ci.yml`.
 
-Guardrails are a powerful tool for automating the enforcement of project rules and policies. By using guardrails, we can improve the quality of our codebase and reduce the amount of manual work required to maintain the project.
+Guardrails são uma ferramenta poderosa para automatizar o reforço de regras do projeto. Ao usar guardrails, melhoramos a qualidade do codebase e reduzimos trabalho manual de manutenção.

@@ -1,30 +1,29 @@
-# Governance
+# Governança
 
-This document defines how the agent council makes decisions, manages scope, and stays aligned.
+Este documento define como o conselho de agentes toma decisões, gerencia escopo e mantém alinhamento.
 
-## Decision Rights (RACI-lite)
+## Direitos de decisão (RACI-lite)
 
-Legend: **R** = Responsible (does the work), **A** = Accountable (final decision), **C** = Consulted, **I** = Informed.
+Legenda: **R** = Responsável (executa), **A** = Accountable (decisão final), **C** = Consultado, **I** = Informado.
 
-| Area | Master Agent | Product Manager | Software Engineer | UX/UI Designer | GitHub Agent | Plan Guardian |
+| Área | Master Agent | Product Manager | Software Engineer | UX/UI Designer | Agente GitHub | Plan Guardian |
 | --- | --- | --- | --- | --- | --- | --- |
-| User communication & prioritization | A/R | C | I | I | I | I |
-| PRD, backlog, roadmap, risks | C | A/R | C | C | I | I |
-| UX flows, UI spec, design system | I | C | C | A/R | I | I |
-| Architecture & implementation | I | C | A/R | C | I | I |
-| Repo hygiene (issues/PR templates) | I | C | C | I | A/R | C |
-| Changelog & releases | I | C | C | I | A/R | I |
-| Plan consistency (PLAN.md ↔ plan.json) | I | C | C | I | I | A/R |
+| Comunicação com usuário e priorização | A/R | C | I | I | I | I |
+| PRD, backlog, roadmap, riscos | C | A/R | C | C | I | I |
+| Fluxos de UX, UI spec, design system | I | C | C | A/R | I | I |
+| Arquitetura e implementação | I | C | A/R | C | I | I |
+| Higiene do repositório (templates de issue/PR) | I | C | C | I | A/R | C |
+| Changelog e releases | I | C | C | I | A/R | I |
+| Consistência do plano (PLAN.md ↔ plan.json) | I | C | C | I | I | A/R |
 
 
-## How Decisions Are Made
+## Como as decisões são tomadas
 
-1. **Prefer written decisions.** Product/UX/tech decisions are recorded in `DECISIONS.md`.
-2. **Use ADRs for technical architecture.** Anything with long-term impact (stack choices, major patterns, persistence decisions) gets an ADR in `docs/adr/`.
-3. **Escalation path.** If agents cannot converge, the Master Agent escalates to the user with options, trade-offs, and a recommended choice.
+1. **Prefira decisões por escrito.** Decisões de produto/UX/tech são registradas em `DECISIONS.md`.
+2. **Use ADRs para arquitetura técnica.** Tudo que tiver impacto de longo prazo (stack, padrões principais, persistência) vira um ADR em `docs/adr/`.
+3. **Caminho de escalonamento.** Se os agentes não convergirem, o Master Agent escala ao usuário com opções, trade-offs e uma recomendação.
 
-## Cadence
+## Cadência
 
-- **Backlog grooming:** as-needed; minimum weekly when active development.
-- **Milestone review:** at milestone start (scope freeze) and end (retro + decision log update).
-
+- **Refinamento de backlog:** conforme necessário; no mínimo semanal quando houver desenvolvimento ativo.
+- **Revisão de marcos:** no início (congelamento de escopo) e no fim (retro + atualização do log de decisões).

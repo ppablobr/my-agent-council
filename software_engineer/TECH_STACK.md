@@ -1,13 +1,13 @@
-# Tech Stack
+# Stack técnica
 
-This document outlines the technical stack for the project.
+Este documento descreve a stack técnica do projeto.
 
 - **Frontend:**
-    - Vite
-    - React
-    - Tailwind CSS
-    - shadcn/ui
+  - Vite
+  - React
+  - Tailwind CSS
+  - shadcn/ui
 - **Backend:**
-    - Supabase (including Edge Functions and Secrets management)
-- **Automation/Orchestration:**
-    - n8n
+  - Supabase (incluindo Edge Functions e gestão de secrets)
+- **Automação/Orquestração:**
+  - n8n

@@ -1,94 +1,94 @@
 {
-  "name": "Multi-Agent Software Development System",
+  "name": "Sistema multiagente de desenvolvimento de software",
   "phases": [
     {
-      "name": "Phase 1: Research and Planning",
+      "name": "Fase 1: Pesquisa e planejamento",
       "steps": [
         {
-          "name": "Research and define the core concepts: Vibe Coding and Spec Driven Development.",
+          "name": "Pesquisar e definir os conceitos centrais: Vibe Coding e Spec-Driven Development.",
           "status": "completed"
         },
         {
-          "name": "Define the roles and responsibilities for the Product Manager, Software Engineer, and UX/UI Designer agents.",
+          "name": "Definir papéis e responsabilidades dos agentes Product Manager, Software Engineer e UX/UI Designer.",
           "status": "completed"
         },
         {
-          "name": "Create the documentation structure for each agent, including the specific files requested (PRD.md, STRUCTURE.md, etc.).",
+          "name": "Criar a estrutura de documentação de cada agente, incluindo os arquivos solicitados (PRD.md, STRUCTURE.md etc.).",
           "status": "completed"
         },
         {
-          "name": "Plan the overall project directory structure to accommodate the agent documentation and the application source code.",
+          "name": "Planejar a estrutura geral de diretórios para comportar documentação dos agentes e código da aplicação.",
           "status": "completed"
         }
       ]
     },
     {
-      "name": "Phase 2: Agent Documentation",
+      "name": "Fase 2: Documentação dos agentes",
       "steps": [
         {
-          "name": "Create the PRD.md file for the Product Manager agent.",
+          "name": "Criar `PRD.md` para o agente Product Manager.",
           "status": "completed"
         },
         {
-          "name": "Create the STRUCTURE.md file for the Product Manager agent.",
+          "name": "Criar `STRUCTURE.md` para o agente Product Manager.",
           "status": "completed"
         },
         {
-          "name": "Create the PROJECT_RULES.md file for the Product Manager agent.",
+          "name": "Criar `PROJECT_RULES.md` para o agente Product Manager.",
           "status": "completed"
         },
         {
-          "name": "Create the CODING_CONVENTIONS.md file for the Software Engineer agent.",
+          "name": "Criar `CODING_CONVENTIONS.md` para o agente Software Engineer.",
           "status": "completed"
         },
         {
-          "name": "Create the TECH_STACK.md file for the Software Engineer agent, detailing the use of Vite, React, Tailwind CSS, and shadcn/ui.",
+          "name": "Criar `TECH_STACK.md` para o agente Software Engineer, detalhando o uso de Vite, React, Tailwind CSS e shadcn/ui.",
           "status": "completed"
         },
         {
-          "name": "Create the DATABASE_SCHEMA.md file for the Software Engineer agent, specifying the use of Supabase.",
+          "name": "Criar `DATABASE_SCHEMA.md` para o agente Software Engineer, especificando o uso de Supabase.",
           "status": "completed"
         },
         {
-          "name": "Create the DESIGN_SYSTEM.md file for the UX/UI Designer agent.",
+          "name": "Criar `DESIGN_SYSTEM.md` para o agente UX/UI Designer.",
           "status": "completed"
         },
         {
-          "name": "Create the UI_SPEC.md file for the UX/UI Designer agent.",
+          "name": "Criar `UI_SPEC.md` para o agente UX/UI Designer.",
           "status": "completed"
         },
         {
-          "name": "Create the UX_FLOW.md file for the UX/UI Designer agent.",
+          "name": "Criar `UX_FLOW.md` para o agente UX/UI Designer.",
           "status": "completed"
         }
       ]
     },
     {
-      "name": "Phase 3: Scaffolding",
+      "name": "Fase 3: Scaffolding",
       "steps": [
         {
-          "name": "Set up the initial project structure with directories for agents and the application.",
+          "name": "Configurar a estrutura inicial do projeto com diretórios para os agentes e para a aplicação.",
           "status": "completed"
         }
       ]
     },
     {
-      "name": "Phase 4: GITHUB Agent Creation",
+      "name": "Fase 4: Criação do agente GitHub",
       "steps": [
         {
-          "name": "Define the role and responsibilities of the GITHUB agent.",
+          "name": "Definir papel e responsabilidades do agente GitHub.",
           "status": "completed"
         },
         {
-          "name": "Create the documentation structure for the GITHUB agent.",
+          "name": "Criar a estrutura de documentação do agente GitHub.",
           "status": "completed"
         },
         {
-          "name": "Update AGENTS.md to include the new GITHUB agent.",
+          "name": "Atualizar `AGENTS.md` para incluir o agente GitHub.",
           "status": "completed"
         },
         {
-          "name": "Update STRUCTURE.md to reflect the new agent's documentation directory.",
+          "name": "Atualizar `STRUCTURE.md` para refletir o diretório de documentação do agente GitHub.",
           "status": "completed"
         }
       ]

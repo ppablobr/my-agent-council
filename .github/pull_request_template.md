@@ -1,21 +1,20 @@
-## Summary
+## Resumo
 
-Describe the user-facing outcome and why this change exists.
+Descreva o resultado para o usuário e por que esta mudança existe.
 
-## Related
+## Relacionados
 
 - Backlog/Issue: BL-XXX / #
-- Decisions/ADRs: `DECISIONS.md` / `docs/adr/NNNN-*.md`
+- Decisões/ADRs: `DECISIONS.md` / `docs/adr/NNNN-*.md`
 
-## Changes
+## Mudanças
 
 - 
 
 ## Checklist
 
-- [ ] Acceptance criteria are satisfied (or updated).
-- [ ] Docs/specs updated where needed (`PRD.md`, `BACKLOG.md`, `ROADMAP.md`, `DECISIONS.md`, ADRs).
-- [ ] Tests and lint pass (or explicitly out-of-scope with rationale).
-- [ ] Risks updated in `RISKS.md` if new risks were found.
-- [ ] `PLAN.md` and `plan.json` are kept in sync when plan changes are made.
-
+- [ ] Critérios de aceitação satisfeitos (ou atualizados).
+- [ ] Docs/specs atualizados quando necessário (`PRD.md`, `BACKLOG.md`, `ROADMAP.md`, `DECISIONS.md`, ADRs).
+- [ ] Testes e lint passando (ou explicitamente fora de escopo, com justificativa).
+- [ ] Riscos atualizados em `RISKS.md` se novos riscos foram encontrados.
+- [ ] `PLAN.md` e `plan.json` mantidos em sincronia quando houver mudanças no plano.

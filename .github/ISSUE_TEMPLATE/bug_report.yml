@@ -1,20 +1,20 @@
-name: Bug report
-description: Report a defect or regression
+name: Relato de bug
+description: Reporte um defeito ou regressão
 title: "bug: "
 labels: ["bug"]
 body:
   - type: textarea
     id: summary
     attributes:
-      label: Summary
-      description: What is broken? What did you expect?
+      label: Resumo
+      description: O que está quebrado? O que você esperava que acontecesse?
     validations:
       required: true
   - type: textarea
     id: steps
     attributes:
-      label: Steps to reproduce
-      description: Numbered, minimal steps
+      label: Passos para reproduzir
+      description: Passos numerados e mínimos
       placeholder: |
         1.
         2.
@@ -24,15 +24,14 @@ body:
   - type: textarea
     id: impact
     attributes:
-      label: Impact
-      description: Who is affected and how severely?
+      label: Impacto
+      description: Quem é afetado e com que severidade?
     validations:
       required: true
   - type: textarea
     id: context
     attributes:
-      label: Context
-      description: Logs, screenshots, environment details, related PRs
+      label: Contexto
+      description: Logs, screenshots, detalhes do ambiente, PRs relacionados
     validations:
       required: false
-

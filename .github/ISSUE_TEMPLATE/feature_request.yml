@@ -1,47 +1,46 @@
-name: Feature request
-description: Propose a user-facing capability (backlog item)
+name: Solicitação de funcionalidade
+description: Proponha uma capacidade voltada ao usuário (item de backlog)
 title: "feat: "
 labels: ["enhancement"]
 body:
   - type: textarea
     id: story
     attributes:
-      label: User story
-      description: As a <persona>, I want <capability>, so that <benefit>.
+      label: História de usuário
+      description: Como <persona>, eu quero <capacidade>, para <benefício>.
       placeholder: |
-        As a ...
-        I want ...
-        so that ...
+        Como ...
+        Eu quero ...
+        Para ...
     validations:
       required: true
   - type: textarea
     id: context
     attributes:
-      label: Context
-      description: Why now? What problem are we solving?
+      label: Contexto
+      description: Por que agora? Que problema estamos resolvendo?
     validations:
       required: true
   - type: textarea
     id: acceptance
     attributes:
-      label: Acceptance criteria (Gherkin)
+      label: Critérios de aceitação (Gherkin)
       placeholder: |
-        Given ...
-        When ...
-        Then ...
+        Dado ...
+        Quando ...
+        Então ...
     validations:
       required: true
   - type: textarea
     id: non_goals
     attributes:
-      label: Non-goals
+      label: Não objetivos
     validations:
       required: false
   - type: textarea
     id: dependencies
     attributes:
-      label: Dependencies / decisions
-      description: Links to ADRs, decisions, other issues
+      label: Dependências / decisões
+      description: Links para ADRs, decisões, outras issues
     validations:
       required: false
-

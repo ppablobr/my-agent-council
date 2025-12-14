@@ -1,11 +1,11 @@
 <div align="center">
-  <img src="src/public/agent_council.png" alt="Agent Council cover" width="860" />
+  <img src="src/public/agent_council.png" alt="Capa do Agent Council" width="860" />
 
-  <h1>Agent Council for Product Development</h1>
+  <h1>Agent Council para Desenvolvimento de Produtos</h1>
   <p><strong>Um “sistema operacional” spec-driven</strong> para construir produtos com um conselho de agentes (PM, Eng, UX, etc.) e colaboração via documentação durável.</p>
 
   <p>
-    <a href="./AGENTS.md"><img alt="Agents" src="https://img.shields.io/badge/agents-council-6f42c1"></a>
+    <a href="./AGENTS.md"><img alt="Agentes" src="https://img.shields.io/badge/agents-council-6f42c1"></a>
     <a href="./docs/adr/README.md"><img alt="ADRs" src="https://img.shields.io/badge/ADRs-enabled-8a2be2"></a>
     <a href="./PLAN_MAINTENANCE.md"><img alt="Plan Guardian" src="https://img.shields.io/badge/guardrails-CI-green"></a>
     <a href="./.github/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/badge/CI-configured-1f6feb"></a>
@@ -86,9 +86,9 @@ Guias para começar e usar o Agent Council:
 
 | Guia | Descrição |
 | --- | --- |
-| [Getting Started](docs/GETTING_STARTED.md) | Setup inicial em 5 minutos |
-| [Usage Guide](docs/USAGE.md) | Como interagir com cada agente |
-| [Customization](docs/CUSTOMIZATION.md) | Adaptar para seu projeto |
+| [Primeiros passos](docs/GETTING_STARTED.md) | Setup inicial em 5 minutos |
+| [Guia de uso](docs/USAGE.md) | Como interagir com cada agente |
+| [Personalização](docs/CUSTOMIZATION.md) | Adaptar para seu projeto |
 
 ## Documentos principais
 

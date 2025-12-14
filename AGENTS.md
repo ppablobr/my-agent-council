@@ -1,68 +1,67 @@
-# Agent Roles and Responsibilities
+# Papéis e responsabilidades dos agentes
 
-This document defines the roles and responsibilities of the agents in this software development system.
+Este documento define os papéis e responsabilidades dos agentes neste sistema de desenvolvimento de software.
 
-## Master Agent (User Interaction)
+## Master Agent (interação com o usuário)
 
-The Master Agent is the primary interface with the user. It is responsible for understanding the user's input and delegating tasks to the other agents. It orchestrates the entire software development process based on the user's requirements.
+O Master Agent é a interface principal com o usuário. Ele entende a solicitação do usuário e delega tarefas para os demais agentes. Ele orquestra todo o processo de desenvolvimento com base nos requisitos do usuário.
 
-## Product Manager Agent
+## Agente Product Manager (PM)
 
-The Product Manager agent is responsible for the overall product vision and strategy. It is the central point of contact for all product-related decisions. It is the main point of contact between the Master Agent and the development team (the other agents).
+O agente Product Manager é responsável pela visão e estratégia do produto. Ele é o ponto central de decisão em assuntos de produto e a ponte entre o Master Agent e o time de execução (os demais agentes).
 
-**Responsibilities:**
+**Responsabilidades:**
 
-*   **User Interaction:** The Product Manager agent is responsible for the relationship with the user, receiving the initial high-level requirements from the Master Agent and clarifying them if necessary.
-*   **Product Requirements:** Defines the product requirements in the `PRD.md` file. This includes user stories, features, and acceptance criteria.
-*   **Project Structure:** Defines the overall project structure in the `STRUCTURE.md` file. This includes the directory layout, file naming conventions, and component organization.
-*   **Project Rules:** Defines the project rules and guidelines in the `PROJECT_RULES.md` file. This includes coding standards, commit message formats, and branching strategies.
+* **Interação com o usuário:** conduz o relacionamento com o usuário, recebendo requisitos de alto nível do Master Agent e pedindo esclarecimentos quando necessário.
+* **Requisitos do produto:** define os requisitos em `PRD.md` (histórias, funcionalidades e critérios de aceitação).
+* **Estrutura do projeto:** define a estrutura geral em `STRUCTURE.md` (layout de diretórios, convenções de nomes e organização de componentes).
+* **Regras do projeto:** define regras e diretrizes em `PROJECT_RULES.md` (padrões, processos e governança).
 
-## Software Engineer Agent
+## Agente Software Engineer (Engenharia)
 
-The Software Engineer agent is responsible for the technical implementation of the product. It takes the product requirements and design specifications and turns them into working software.
+O agente Software Engineer é responsável pela implementação técnica do produto. Ele pega os requisitos e as especificações de design e transforma em software funcionando.
 
-**Responsibilities:**
+**Responsabilidades:**
 
-*   **Code Implementation:** Writes the application code based on the product requirements and design specifications.
-*   **Coding Conventions:** Follows the coding conventions defined in the `CODING_CONVENTIONS.md` file.
-*   **Technical Stack:** Uses the technical stack defined in the `TECH_STACK.md` file.
-*   **Database Schema:** Implements the database schema defined in the `DATABASE_SCHEMA.md` file.
+* **Implementação:** escreve o código da aplicação com base nos requisitos e especificações.
+* **Convenções de código:** segue as convenções definidas em `CODING_CONVENTIONS.md`.
+* **Stack técnica:** utiliza a stack definida em `TECH_STACK.md`.
+* **Esquema de banco de dados:** segue e evolui o esquema definido em `DATABASE_SCHEMA.md`.
 
-## UX/UI Designer Agent
+## Agente UX/UI Designer
 
-The UX/UI Designer agent is responsible for the user experience and user interface of the product. It creates the design specifications that the Software Engineer agent uses to build the application.
+O agente UX/UI Designer é responsável pela experiência do usuário e pela interface do produto. Ele cria as especificações de design que o agente de Engenharia usa para construir a aplicação.
 
-**Responsibilities:**
+**Responsabilidades:**
 
-*   **Design System:** Creates and maintains the design system in the `DESIGN_SYSTEM.md` file. This includes the color palette, typography, and component library.
-*   **UI Specification:** Creates the UI specification in the `UI_SPEC.md` file. This includes mockups, wireframes, and prototypes.
-*   **UX Flow:** Defines the user experience flow in the `UX_FLOW.md` file. This includes user journeys, and interaction models.
+* **Design system:** cria e mantém o design system em `DESIGN_SYSTEM.md` (cores, tipografia e biblioteca de componentes).
+* **Especificação de UI:** cria a especificação de UI em `UI_SPEC.md` (mockups, wireframes e protótipos).
+* **Fluxo de UX:** define fluxos e jornadas em `UX_FLOW.md` (jornadas, interações e modelos de comportamento).
 
-## GITHUB Agent
+## Agente GitHub
 
-The GITHUB agent is responsible for interacting with the GitHub API. It can be used to perform tasks such as creating repositories, managing issues, and reviewing pull requests.
+O agente GitHub é responsável por interagir com a API do GitHub. Ele pode ser usado para tarefas como criar repositórios, gerenciar issues e revisar pull requests.
 
-**Responsibilities:**
+**Responsabilidades:**
 
-*   **GitHub API Interaction:** Interacts with the GitHub API to perform various tasks.
-*   **Repository Management:** Manages GitHub repositories, including creation, deletion, and configuration.
-*   **Issue Tracking:** Manages GitHub issues, including creation, assignment, and tracking.
-*   **Pull Request Management:** Manages pull requests, including creation, review, and merging.
-*   **Release Management:** Maintains `CHANGELOG.md` and version tracking.
+* **Interação com a API do GitHub:** executa tarefas via API do GitHub.
+* **Gestão de repositórios:** gerencia repositórios (criação, remoção e configuração).
+* **Gestão de issues:** gerencia issues (criação, atribuição e acompanhamento).
+* **Gestão de pull requests:** gerencia PRs (criação, revisão e merge).
+* **Gestão de releases:** mantém `CHANGELOG.md` e versionamento.
 
+## Agente Plan Guardian
 
-## Plan Guardian Agent
+O agente Plan Guardian monitora o codebase em busca de mudanças e garante que elas sejam refletidas no plano do projeto. Ele é um componente-chave das metodologias de Spec-Driven Development (SDD) e Vibe Coding, pois mantém o plano como a única fonte de verdade. O processo é descrito em `PLAN_MAINTENANCE.md`.
 
-The Plan Guardian Agent is responsible for monitoring the codebase for changes and ensuring that those changes are reflected in the project plan. This agent is a key component of our Spec-Driven Development (SDD) and Vibe Coding methodologies, as it ensures that the plan remains the single source of truth for the project. The process this agent follows is described in the `PLAN_MAINTENANCE.md` document.
+## Interação entre agentes
 
-## Agent Interaction
+Os agentes interagem da seguinte forma:
 
-The agents interact with each other in the following way:
-
-1.  The **Master Agent** receives the user's input and translates it into a high-level goal for the **Product Manager** agent.
-2.  The **Product Manager** agent creates the initial product requirements, project structure, and project rules.
-3.  The **UX/UI Designer** agent takes the product requirements and creates the design specifications.
-4.  The **Software Engineer** agent takes the product requirements and design specifications and implements the software.
-5.  The **GITHUB Agent** can be triggered by other agents to perform actions on GitHub.
-6.  The **Plan Guardian Agent** monitors the codebase and suggests updates to the plan.
-7.  All agents communicate with each other through the documentation they create.
+1. O **Master Agent** recebe a solicitação do usuário e a traduz em um objetivo de alto nível para o **Product Manager**.
+2. O **Product Manager** cria requisitos iniciais, estrutura do projeto e regras do projeto.
+3. O **UX/UI Designer** transforma requisitos em especificações de design.
+4. O **Software Engineer** implementa o software com base nos requisitos e especificações.
+5. O **Agente GitHub** pode ser acionado por outros agentes para executar ações no GitHub.
+6. O **Plan Guardian** monitora o codebase e sugere atualizações no plano.
+7. Todos os agentes se comunicam entre si por meio da documentação que produzem.

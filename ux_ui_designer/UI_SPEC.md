@@ -1,94 +1,94 @@
-# UI Specification
+# Especificação de UI
 
-This document defines how to document user interface specifications for the project.
+Este documento define como documentar especificações de interface do usuário para o projeto.
 
-## Page Documentation Format
+## Formato de documentação de páginas
 
-Each page/screen should be documented with the following structure:
+Cada página/tela deve ser documentada com a seguinte estrutura:
 
 ```markdown
-## [Page Name]
+## [Nome da página]
 
 ### Purpose
-Brief description of what this page does and its role in the user flow.
+Breve descrição do que esta página faz e seu papel no fluxo do usuário.
 
 ### Route
 `/path/to/page`
 
 ### Layout
-- Header: [description]
-- Main content: [description]
-- Sidebar (if any): [description]
+- Cabeçalho: [descrição]
+- Conteúdo principal: [descrição]
+- Barra lateral (se houver): [descrição]
 
 ### Components Used
 - ComponentA
 - ComponentB
 
 ### States
-- Loading: [description]
-- Empty: [description]
-- Error: [description]
-- Success: [description]
+- Carregando: [descrição]
+- Vazio: [descrição]
+- Erro: [descrição]
+- Sucesso: [descrição]
 
 ### Actions
-| Action | Trigger | Result |
+| Ação | Disparo | Resultado |
 | --- | --- | --- |
-| Submit form | Click button | API call, redirect |
+| Enviar formulário | Clique no botão | Chamada de API, redirect |
 
 ### Responsive Behavior
-- Mobile: [changes]
-- Tablet: [changes]
-- Desktop: [default]
+- Mobile: [mudanças]
+- Tablet: [mudanças]
+- Desktop: [padrão]
 ```
 
-## Component State Documentation
+## Documentação de estados de componentes
 
-Document all possible states for interactive components:
+Documente todos os estados possíveis de componentes interativos:
 
-| State | Visual | Behavior |
+| Estado | Visual | Comportamento |
 | --- | --- | --- |
-| Default | Normal appearance | Awaiting interaction |
-| Hover | Subtle color change | Cursor pointer |
-| Active/Pressed | Darker shade | Visual feedback |
-| Focus | Focus ring visible | Keyboard accessible |
-| Disabled | Muted colors, 50% opacity | No interaction |
-| Loading | Spinner or skeleton | Prevents re-submission |
-| Error | Red border/text | Shows error message |
+| Padrão | Aparência normal | Aguardando interação |
+| Hover | Mudança sutil de cor | Cursor pointer |
+| Ativo/Pressionado | Tom mais escuro | Feedback visual |
+| Foco | Focus ring visível | Acessível via teclado |
+| Desabilitado | Cores neutras, 50% opacidade | Sem interação |
+| Carregando | Spinner ou skeleton | Evita reenvio |
+| Erro | Borda/texto vermelho | Mostra mensagem de erro |
 
-## Responsive Breakpoints
+## Breakpoints responsivos
 
-Design mobile-first. Document breakpoint-specific changes:
+Desenhe com abordagem mobile-first. Documente mudanças por breakpoint:
 
-| Breakpoint | Width | Layout Changes |
+| Breakpoint | Largura | Mudanças no layout |
 | --- | --- | --- |
-| Mobile | < 640px | Single column, stacked elements |
-| Tablet | 640px - 1023px | Two columns, collapsed nav |
-| Desktop | ≥ 1024px | Full layout, sidebar visible |
+| Mobile | < 640px | Coluna única, elementos empilhados |
+| Tablet | 640px - 1023px | Duas colunas, navegação colapsada |
+| Desktop | ≥ 1024px | Layout completo, sidebar visível |
 
-## Accessibility Checklist
+## Checklist de acessibilidade
 
-For each page/component, verify:
+Para cada página/componente, verifique:
 
-- [ ] All images have alt text
-- [ ] Form inputs have labels
-- [ ] Color is not the only indicator
-- [ ] Keyboard navigation works
-- [ ] Focus order is logical
-- [ ] Screen reader announces correctly
+- [ ] Todas as imagens têm texto alternativo (alt)
+- [ ] Inputs de formulário têm labels
+- [ ] Cor não é o único indicador
+- [ ] Navegação por teclado funciona
+- [ ] Ordem de foco é lógica
+- [ ] Leitor de tela anuncia corretamente
 
-## Wireframe Conventions
+## Convenções de wireframe
 
-When creating wireframes:
+Ao criar wireframes:
 
-- Use grayscale to focus on layout
-- Annotate interactive elements
-- Show all states (especially empty/error)
-- Include responsive versions
+- Use escala de cinza para focar no layout
+- Anote elementos interativos
+- Mostre todos os estados (principalmente vazio/erro)
+- Inclua versões responsivas
 
 ---
 
 ## Pages
 
-> **Note:** Document each page below as it is designed.
+> **Nota:** documente cada página abaixo conforme for desenhada.
 
 _No pages documented yet._
